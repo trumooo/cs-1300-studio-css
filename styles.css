@@ -8,6 +8,8 @@
 }
 .hovered-element {
   color:#f5f3f5; /* Default color */
+  cursor: pointer;
+
 }
  */
 .icons {
@@ -34,9 +36,6 @@ body {
   font-size: 4vw;
 
 
-}
-button:hover {
-  cursor: pointer;
 }
 /* #staffGallery{
   width: 75%;
@@ -217,18 +216,13 @@ button:hover {
       }
     .icons {
       width: 0vw;
-      /* height: 7vw;
-      display: flex;
-      justify-content: right;
-      overflow:hidden; */
+
     }
     #bagelGallery{
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      /* justify-content: right; */
-      /* right: 45vw; */
-      /* align-items: flex-start; */
+
       margin-top: 5.5vw;
     }
     .buffer{
@@ -300,7 +294,7 @@ button:hover {
       margin-top: 0.8vw;
       font-size: 3vw;
     }
-    #checkout{
+    .checkout{
       margin-top: 10vw;
       background-color: #f5f3f5;
       color: #1b254f;
@@ -308,5 +302,7 @@ button:hover {
       height: 6vw;
       font-size: 5vw;
       border-radius: 5px 5px 5px 5px;
+      position: relative;
+      /* top: 70%; */
     }
 } 
