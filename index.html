@@ -1,70 +1,81 @@
-  <!-- TO RUN IN BROWSER:
-    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
-    2. Right click html file and either run in default browser or another browser
-  -->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
+    <title>Bagel Gourmet</title>
     <!-- import CSS styles -->
+
+    
+
+
+
     <link rel="stylesheet" href="styles.css" /> 
+
   </head>
   
   <!-- page content goes into <body> -->
-  <body  style="background-color:teal;">
+  <body  style="background-color:#F5F3F5;">
     <div id="site">
-    <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
-    </div>
-    <hr/>
-    <div id="staffGallery">
-
-      <div class="card">
-        <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-        <h3>Eeyore hanging</h3>
-      </div>
-
-      <div class="card">
-        <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-        <h3>Eeyore chilling</h3>
-      </div>
-
-      <div class="card">
-        <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-        <h3>Kanga-Roo</h3>
-      </div>
+    <div class="logoBar" style="background-color: #1b254f; ">
+      <h1 style="color: #F5F3F5;">Bagel Gourmet</h1>
       
-      <div class="card">
-        <img class="galleryImage" src="./assets/Owl-Phone.png"/>
-        <h3>Owl on his phone</h3>
-      </div>
-
-      <div class="card">
-        <img class="galleryImage" src="./assets/Owl-Music.png"/>
-        <h3>Owl Jamming</h3>
-      </div>
-
-      <div class="card">
-        <img class="galleryImage" src="./assets/Piglet-Cold.png"/>
-        <h3>Piglet chilling</h3>
-      </div>
-
-      <div class="card">
-        <img class="galleryImage" src="./assets/Piglet-Flower.png"/>
-        <h3>Joyful Piglet</h3>
-      </div>
-      
-      <div class="card">
-        <img class="galleryImage" src="./assets/Roo-Bee.png"/>
-        <h3>Roo with a friend</h3>
+      <!-- <div class="side-bar current">
+        <h1>Place Order</h1>
+      </div> -->
+      <div class="side-bar">
+        <h1 class="current">Place Order</h1>
+        <h1>Locations</h1>
+        <h1>About Us</h1>
+        <h1>Help</h1>
       </div>
     </div>
-  </body>`  
+
+    <div class="bag" style="background-color: #1b254f; ">
+      <a id=bag-name, style="color: #F5F3F5;">Bag _____________</a>
+      
+      <!-- <div class="side-bar current">
+        <h1>Place Order</h1>
+      </div> -->
+        <a id="bag-items">... Currently Empty ...</a>
+        <a id="total">__________________ Total: $0.00 __________________</a>
+        <a id="checkout">Checkout</a>
+    </div>
+
+    <div class="buffer">
+      Pick Your Bagel
+      <img class="icons upper-left"  src="./assets/back-icon.png"/>
+      <img class="icons upper-right"  src="./assets/bag-icon.png"/>
+    </div>
+
+    <div id="bagelGallery">
+      <div class="card hovered-element" >
+        <img class="galleryImage hovered-element" src="./assets/bagel.png"/>
+        <h3 style="margin-bottom: -5px; margin-top: 0px;">Plain</h3>
+      </div>
+
+      <div class="card">
+        <img class="galleryImage" src="./assets/everything.png"/>
+        <h3 style="margin-bottom: 3px; margin-top: 0px;">Everything</h3>
+      </div>
+
+      <div class="card">
+        <img class="galleryImage" src="./assets/salt.png"/>
+        <h3 style="margin-bottom: -4px; margin-top: 0px;">Salt</h3>
+      </div>
+
+      <div class="card">
+        <img class="galleryImage" src="./assets/asiago.png"/>
+        <h3 style="margin-bottom: 3px; margin-top: 0px;">Asiago</h3>
+      </div>
+
+      <div class="card">
+        <img class="galleryImage" src="./assets/rainbow.png"/>
+        <h3 style="margin-bottom: 3px; margin-top: 0px;">Rainbow</h3>
+      </div>
+
+
+    </div>
+  </body>
 </div>
 
 
