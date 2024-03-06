@@ -165,7 +165,7 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 30vw;
+    /* width: 50vw; */
     font-size: 4vw;
     margin: 7px;
     background: linear-gradient(to bottom, #576ca8 75%, #274690 15%);
@@ -228,7 +228,7 @@ body {
     .buffer{
       height: 8vw;
       font-size: 5vw;
-      color: #274690;
+      color: #f5f3f5;
       text-align: center;
       margin-top: 0;
       margin-bottom: 1vw;
@@ -239,7 +239,7 @@ body {
       align-items: center;
       flex-wrap: nowrap;
       flex-direction: column;
-      width: 30vw;
+      width: 25vw;
       font-size: 4vw;
       margin: 7px;
       background: linear-gradient(to bottom, #576ca8 75%, #274690 15%);
@@ -268,9 +268,9 @@ body {
       display: flex;
       position: fixed;
       left: 0;
-      top: 15vw;
+      top: 12%;
       /* font-size: 1.2vw; */
-      width: 30%;
+      width: 1000px;
       height: 100%;
       border-radius: 0px 15px 15px 0px;
       flex-direction: column;
@@ -280,11 +280,11 @@ body {
       text-align: center;
     }
     #bag-name{
-      font-size: 5vw;
+      font-size: 0vw;
       margin-top: 10vw;
     }
     #bag-items{
-      font-size: 1.8vw;
+      font-size: 70px;
       margin-top: 0.8vw;
       margin-bottom: 50vw;
       justify-content: space-evenly;
@@ -292,15 +292,15 @@ body {
     }
     #total{
       margin-top: 0.8vw;
-      font-size: 3vw;
+      font-size: 100px;
     }
     .checkout{
-      margin-top: 10vw;
+      /* margin-top: 10vw; */
       background-color: #f5f3f5;
       color: #1b254f;
       width: 90%;
       height: 6vw;
-      font-size: 5vw;
+      font-size: 160px;
       border-radius: 5px 5px 5px 5px;
       position: relative;
       /* top: 70%; */
