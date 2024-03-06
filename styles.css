@@ -35,6 +35,9 @@ body {
 
 
 }
+button:hover {
+  cursor: pointer;
+}
 /* #staffGallery{
   width: 75%;
   display: flex;
