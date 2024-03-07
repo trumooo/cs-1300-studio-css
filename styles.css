@@ -310,10 +310,10 @@ body {
       background-color: #f5f3f5;
       color: #1b254f;
       width: 90%;
-      height: 100px;
+      height: 80px;
       font-size: 32px;
       border-radius: 5px 5px 5px 5px;
       position: absolute;
-      top: 65%;
+      bottom: 120px;
     }
 } 
