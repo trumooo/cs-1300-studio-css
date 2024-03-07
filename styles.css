@@ -1,0 +1,12 @@
+.image{ 
+    height: 40vw;
+    width: 65vw;
+}
+.image-small{ 
+    height: 35vw;
+    width: 35vw;
+}
+.image-large{ 
+    height: 50vw;
+    width: 75vw;
+}

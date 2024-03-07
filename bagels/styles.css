@@ -1,5 +1,4 @@
-
-
+/* General Styles */
 .logoBar{
   width: 100%;
   height: auto;
@@ -7,11 +6,9 @@
   font-family: "Cabin","Montserrat", sans-serif;
 }
 .hovered-element {
-  color:#f5f3f5; /* Default color */
+  color:#f5f3f5;
   cursor: pointer;
-
 }
- */
 .icons {
   width: 7vw;
   height: 7vw;
@@ -34,25 +31,15 @@ body {
   color: #f5f3f5;
   font-family: "Cabin", "Montserrat", sans-serif;
   font-size: 4vw;
-
-
 }
-/* #staffGallery{
-  width: 75%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 
-} */
 .galleryImage{
   display: flex;
   width: 80%;
   height: 50%;
   margin-top: 10%;
-  /* max-height: 300px; */
   margin-bottom: 10%;
 }
-
 
 .buffer {
   width: 100%;
@@ -63,7 +50,6 @@ body {
 .card {
   background-size: auto;
   background: linear-gradient(to bottom, #576ca8 80%, #274690 15%);
-  /* outline: 2px solid blue; */
   height:auto;
   width: 100%;
   display: flex;
@@ -75,7 +61,6 @@ body {
   border-radius: 15px 15px 15px 15px;
   margin-bottom: 20px;
   font-size: 14vw;
-
 }
 
 #site{
@@ -84,9 +69,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  
 }
 
+/* Mobile phone display styles*/
 @media screen and (max-width: 600px){
   .bag{
     font-size: 0vw;
@@ -108,8 +93,7 @@ body {
     font-size: 0vw;
   }
 }
-
-
+/* Ipad display styles*/
 @media screen and (min-width: 601px) and (max-width: 1000px){
   .bag{
     font-size: 0vw;
@@ -137,18 +121,11 @@ body {
     }
   .icons {
     width: 0vw;
-    /* height: 7vw;
-    display: flex;
-    justify-content: right;
-    overflow:hidden; */
   }
   #bagelGallery{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* justify-content: right; */
-    /* right: 45vw; */
-    /* align-items: flex-start; */
     margin: -5px;
   }
   .buffer{
@@ -192,7 +169,7 @@ body {
   }
 }
 
-
+/* PC display settings*/
   @media screen and (min-width: 1001px) {
     #site{
       display: flex;
