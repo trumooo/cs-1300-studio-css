@@ -8,69 +8,117 @@
 </head>
 <body>
     <header>
-        <h1>Comparing Two Websites</h1>
+        <h1>Dynamic Development</h1>
     </header>
     <main>
         <div class="note">
-            <h2>A Case Study into A/B Testing</h2>
-            <p>It is easy to know when a website is bad. However, it is very hard to know what specifically makes it bad. It is even harder to know which of two websites is better.</p>
-            <a>However, this becomes a lot easier with <b>a/b testing</b>.</a>
+            <h2>Making Reactive Sites</h2>
+            <p>I have made a few different design webpages, yet I think its time I take it up a notch. I need to work on dynamic websites.</p>
+            <a>I want this project to ultimately culminate in a sortable, filterable webpage with some sort of interactable aggregate.</a>
             <hr>
-            <p>This journal entry will start with a case study overview, then move to website analysis, proceed to a statistical summary, and analyze real user data.</p>
+            <p>This journal entry will start with a idea generation, then move to a competitve analysis, and proceed to a development summary.</p>
         </div>
         <div class="section-border">
             <h3>Getting Started</h3>
-            <p>I wanted to see how easy it is to A/B test. This term has always felt a little abstract and elusive, so I wanted to know what exact conclusions you can draw from it and when you should be using it.</p>
-            <p>First, I needed a website. Luckily, this was all part of a class project, so I was given one to start with. This serves as our A-site. It is a website meant to help you book doctor appointments.</p>
-            <p>Here is an image of the website I was given, which we will just call "A".</p>
-            <img class="image" alt="website with pale buttons and hard to read text" src="./assets/a.png"/>
-            <p>I was also given an objective to measure for A.</p>
+            <p>There are plenty of different websites I could make that fullfil the requirments. When quickly listing some rough ideas I was able to come up with:</p>
+            <ul>
+                <li>Movies</li>
+                <li>Groceries</li>
+                <li>Hotels</li>
+                <li>Bakery</li>
+                <li><b>Honey</b></li>
+                <li>Podcasts</li>
+                <li>Diverse-owned goods</li>
+            </ul>
+            <p>Now, I know one of those is very different then the rest, but I think that is where it really shines. I should say that I am a beekeeper. This means that I know a bit about the industry and the major honey producers. The industry is full of a few massive companies and then many mom and pop shops. </p>
+            <p>I thought it could be interesting to design a system to help people support the smaller producers. They both have better a better product and usually struggle to find customers—and end up giving away a lot of honey as gifts.</p>
+            <p>But, local honey is great. It can help people with their seasonal allergies, and often is made up of many more pollen sources than the big producers. These hints of flavor make the taste of the honey more complex and make it pair well with certain food groups.</p>
+            <p>So, I wanted to theme my aggregator and list to be based on a market place for small producer's honey.</p>
         </div>
         <div class="section-flat">
-            <h3>The Objective</h3>
-            <p>Users were supposed to register for an appointment with Adam Ng at Morristown Medical Center on April 23, 2024.</p>
-            <p>This meant that they had to click on this specific button to succeed. Clicking another button resulted in a failure, and clicking on some other page element was called a misclick.</p>
-            <img class="image-small" alt="website with an arrow pointing to specific button" src="./assets/a_highlighted.png"/>
-            <p>In all, 23 users accessed the page; they were tasked to achieve the objective. During this time, their mouse movement, time on page, and clicks were recorded.</p>
-        </div>
-        
-        <h1>Starting to Redesign</h1>
-        <p>Now, I had a website, an objective, and some user data. All I needed was something to compare this to. I sought to create a different version of A. However, before doing this, I analyzed the core faults with A.</p>
-        <div class="section-shadow">
-            <h3>The Problems with A</h3>
-            <h4>1. Too little contrast between the button's text and background color.</h4>
-            <h4>2. The "See Appointment" and "Schedule Appointment" buttons are identical.</h4>
-            <h4>3. The dates are not in chronological order.</h4>
-            <h4>4. The locations are not clearly separated or filterable.</h4>
-            <h4>5. The doctors are not clearly separated or filterable.</h4>
-            <p>These visual design choices result in site A having poor visibility and accessibility.</p>
+            <h1>The Compititon</h1>
+            <p>In order to best understand how my website can shine, I need to look at the current methods that exist.  I want to start with a competitive analysis of the major multi-vendor sellers and create a feature comparison chart. For the sake of this project, I am just going to highlight three sellers but in a real scenario I would expand this to many more. </p>
+            <p>Before starting, I want to highlight the five factors that I will be judging these websites on.</p>
+            <ol>
+                <li>Intuitive</li>
+                <li>Regional Breakdown</li>
+                <li>Highlights Small Producers</li>
+                <li>Educates Users</li>
+                <li>Helpful Reviews/Comments</li> 
+                </ol>
+            <a>I chose these factors because I believe that they best align with the idea. This is to say that our company's key metric should be number of sales from small producers, and these are the factors that underly that statistic.</a>
+            <p>The three websites I chose to complete our competitve comparison chart with are 1. <a href="https://www.amazon.com/"><b>Amazon</b></a>, 2. <a href="https://honey.com/honey-locator/#"><b>Honey</b></a>, and 3. <a href="https://www.localhoneyfinder.org/index.php#states"><b>Local Honey Finder</b></a>.</p>
+            <img class="image-small" alt="amazon search for honey" src="./assets/amazon.png"/>
+            <img class="image-small" alt="honey search on honey.com" src="./assets/honey.png"/>
+            <img class="image-small" alt="local honey finder.com" src="./assets/local.png"/>
+           <div class="chart">
+            <h2>Comparison Chart</h2>
+            <table>
+                <tr>
+                  <th> Feature </th>
+                  <th> Amazon </th>
+                  <th> Honey.com </th>
+                  <th> Local Honey Finder </th>
+                </tr>
+                <tr>
+                  <td>Reviews</td>
+                  <td>✅</td>
+                  <td>❌</td>
+                  <td>❌</td>
+                </tr>
+                <tr>
+                    <td>Intuitive Design</td>
+                    <td>✅</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                  </tr>
+                  <tr>
+                    <td>Regional Breakdown</td>
+                    <td>❌</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                  </tr>
+                  <tr>
+                    <td>Highlights Small Producers</td>
+                    <td>❌</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                  </tr>
+                  <tr>
+                    <td>Educates Users</td>
+                    <td>❌</td>
+                    <td>✅</td>
+                    <td>❌</td>
+                  </tr>
+              </table>
+            </div>
+            <div class="section-shadow">
+
+            <h3>Comparison Chart Analysis:</h3>
+            <p>I think this competitive analysis really outlined that there is a way to greatly expand upon the current options. No method is perfect. They either are convoluted / too geographically oriented. On the other hand, they are standard shopping methods not modified to take in consideration of honey’s nuances. </p>
+            <p><b>Amazon's</b> most effective factors are its intuitive design and filtering system. However, it doesn't allow you to easily break down results by geographic origin. There is a clear heirarchy and design cohesion.</p>
+            <p><b>Honey's</b> most effective factors are its massive map. Yet, there are now ways of easily buying the products on the website. It only redirects you. There is a map like interface which doesn't seem entirely cohesive to the shopping experience.</p>
+            <p><b>Local Honey Finder</b> has similar problems. Additionally, it doesn't effectively educate the users on the nuances of honey's many details. It doesn't tell the user the specific pollon breakdown or flavor notes that honey.com can educate the user. It's work flow is unclear and will likely lead to the user having frantic mouse movement. </p>
+            </div>
         </div>
         <div class="section-border">
-            <h1>Creating B</h1>
-            <p>A/B testing works best when you test one or a few specific elements at a time. This allows you to see what exact change made the difference, rather than just knowing something changed.</p>
-            <p>Thus, I knew I only wanted to make one or two changes to my alternative version of A, which we will just call "B".</p>
-            <p>I decided that the hard-to-read text was the most significant limitation on an individual's success rate, so I made changes to emphasize this when making my edits.</p>
-            <p>Specifically, I tried to focus on making the schedule and see appointments buttons both readable and slightly more distinct (using a drop shadow and different background for the schedule appointment button). I also went ahead and increased the font thickness for the dates, so that people could more easily see the date of each appointment.</p>
-            <img class="image" alt="website with schedule appointment buttons and see appointment buttons on different color backgrounds" src="./assets/b.png"/>
-            <p>The overall theme for my B was to improve readability.</p>
+        <h1>Starting to Redesign</h1>
+        <p>Using this information, let's design the key features needed for this website:</p>
+            <h4>1. A way of educating the user about each type of honey.</h4>
+            <h4>2. The ability to filter the honeys by pairings.</h4>
+            <h4>3. The ability to regionally organize the honeys.</h4>
+            <h4>4. The ability to sort by both price and ounce.</h4>
+            <h4>5. Understandable UI/UX that matches standard shopping behavior.</h4>
+            <p>I believe these features will successfuly differentiate from the current alternatives.</p>
         </div>
-        <h1>The Data</h1>
-        <p>In all, 20 people interacted with site B. They all attempted the same objective as the users from site A. Now, I want to see which website is better.</p>
-        <p>On the left is the data for site A, and the new data from site B is on the right.</p>
-        <img class="image-small" alt="data sheet for A users" src="./assets/a_data.png"/> <a></a><img class="image-small" alt="data sheet for B users" src="./assets/b_data.png"/>
-        <p>There is a lot here, so I'll break it down further.</p>
-        <h3>There are three main data categories that I will be investigating to statistically determine the better website:</h3>
-        <h4>1. Did the user misclick? (known as "did_misclick")</h4>
-        <h4>2. How much did the user move their mouse? (known as "mouse_move_distance")</h4>
-        <h4>3. How long was the user on the page before completing the objective? (known as "time_on_page")</h4>
-        <p>Since we are comparing two websites, we don't really need to focus too much on the units for these data points, rather just that they are consistent from website A to B. This has one notable exception of "did_misclick" which is a binary option. We will put a pin in this idea, and explain it later.</p>
-        <a><b>My main goal is to determine which of these three statistics are significantly different between site B and A.</b> Whenever possible, I want to determine which of B's statistics are significantly less than A's statistics.</a>
-        <p>I will be using a statistical threshold of p=0.05. This means that all p-values less than 0.05 will be considered significant.</p>
+
+        <h1>The Design</h1>
+        <p></p>
         
         <div class="section-flat">
-            <h2>Analysis Of Misclick Data:</h2>
-            <p>This is a binary data point. Results are either TRUE or FALSE. This represents whether or not the user clicked on something before clicking the appointment button.</p>
-            <p>For this statistical analysis, we want to prove that there is a significant difference between site A and B.</p>
+            <h3>Components</h3>
+            <p>I broke down this design section into each of the elements that I want to use. First, there is each individual product item. Second is the cart, and third is the filters.</p>
+            <p></p>
             <p>This means that our <b>Null Hypothesis (H0)</b> is that there is no significant difference between the misclick rate for Site A and Site B.</p>
             <p>Our <b>Alternative Hypothesis (HA)</b> is that the edits made to Site B's buttons and styling caused a scientifically significant difference in the misclick rate for Site A and Site B.</p>
             <p>My <b>prediction</b> is that we will prove our HA because many stylistic and visual edits were made.</p>
