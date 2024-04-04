@@ -116,58 +116,24 @@
         <p></p>
         
         <div class="section-flat">
-            <h3>Components</h3>
-            <p>I broke down this design section into each of the elements that I want to use. First, there is each individual product item. Second is the cart, and third is the filters.</p>
-            <p></p>
-            <p>This means that our <b>Null Hypothesis (H0)</b> is that there is no significant difference between the misclick rate for Site A and Site B.</p>
-            <p>Our <b>Alternative Hypothesis (HA)</b> is that the edits made to Site B's buttons and styling caused a scientifically significant difference in the misclick rate for Site A and Site B.</p>
-            <p>My <b>prediction</b> is that we will prove our HA because many stylistic and visual edits were made.</p>
-            <p>I need to use a <b>chi-square test</b> to analyze the statistical difference between site A and B because misclick data is a binary flag.</p>
-        </div>
-        <div class="section-shadow">
-            <h3>Misclick - Chi-square - Data Summary</h3>
-            <img class="image-small" alt="graph showing misclick data" src="./assets/misclick.png"/>
-            <p>The Degrees of Freedom for this test are one. This is based on the number of rows and columns of the data table. With a one and a significant threshold of p < 0.05, we can look at the chi-square distribution table to get a significance level of 3.841. All this means is that if our Chi^2 value is greater than 3.841, then we can reject our null hypothesis. The Chi^2 value was calculated to be 6.0634. <b>Thus, we can reject the null hypothesis. The edits made to site B caused a significant change in user misclick data.</b></p>
+            <h3>Honey Item</h3>
+            <p>The card for each honey product is the most important design for this project. So, I decided to use a fairly standard minimalist design. I wanted it to be professional and serious. The image should take up the top third of the image followed by some details and then an add button. I also went ahead and included a remove from cart button. </p>
+            <p>My primary colors were going to be white, black, and two shades of orange. This would keep the website looking sleek yet appropriately themed.</p>
+            <img class="image-small" alt="image of honey card" src="./assets/honeycard.png"/>
+            <p>I ultimately settled on this design. I like the body text because it helps educate the user on what to look for in their honey. I think the drop shadow gives the card a feeling of clickability. To further this I added some hover effects on the sub-buttons. </p>
         </div>
 
+        <div class="section-shadow">
+            <h3>Final Website Mockup</h3>
+            <img alt="Image of final honey website" src="./assets/final.png" style="width: 900px;"/>
+            <p>This is the final version of the mock up website. It is fully interacable and sortable. Please check it out at <a href="https://honey-site-green.vercel.app/">https://honey-site-green.vercel.app/</a></p>
+        </div>
     <hr>
     <div class="section-flat">
-        <h2>Analysis Of Time Data:</h2>
-        <p>This is a continuous data point. Results are in milliseconds. This represents how long the user was on the website before completing the objective.</p>
-        <p>For this statistical analysis, we want to prove that users spent less time on site B than on site A. This would mean the new design was more efficient and clear. This was not possible for a binary data point; however, we can do it for continuous data types through a two-sample, one-tail t-test. Essentially, we are comparing two different sets of continuous variables and want to see if one group is significantly less than the other.</p>
-        <p>This means that our <b>Null Hypothesis (H0)</b> is that there is no significant difference between the time spent on Site A and Site B.</p>
-        <p>Our <b>Alternative Hypothesis (HA)</b> is that our edits made it so that users on site B needed significantly less time to complete the objective than users on Site A.</p>
-        <p>My <b>prediction</b> is that we will prove our HA because many stylistic and visual edits were made, improving the text legibility of site B.</p>
-    </div>
-    <div class="section-shadow">
-        <h3>Time Spent - Two Sample, One Sided T-test - Data Summary</h3>
-        <img class="image-small" alt="graph showing time spent data" src="./assets/time.png"/>
-        <p>The average time on page A is 8193.8 ms. The variance for page A is 6594762.168. The average time on page B is 22324.783 ms. The variance for page B is 234839182.451. We use these statistics to complete a T-test which gives us a Degrees of Freedom of 23.4156. The more degrees of freedom that a t-test has, the more the data-set distribution approaches normal. We also got a t-score of 4.353. This indicates a significant spread between the two groups. A positive number specifically means that Site B's time is less than site A's. Finally, we also got a p-value of 1-0.00011293. This is less than 1-0.05, so <b>we can reject the null hypothesis. The edits made to site B led users to spend significantly less time on the page than site A.</b></p>
+        <h2>Conclusion:</h2>
+        <p>In the end I like how the website turned out. I do think the cart could use some work, but the main purpose of this project was not visual design but product design. This website has all of the features that the competitve analysis determined it should. Specifically, it is both intuitive and contains the ability for geographic breakdown. I also added a feature, so users can sort by organic honeys. Lastly, the user can also filter by pairings to better select their ideal honeys. </p>
+        <p>This project also taught me a ton about react and how interacable websites can be created.</p>
     </div>
     
-    <hr>
-    <div class="section-flat">
-        <h2>Analysis Of Mouse Movement Data:</h2>
-        <p>This is a continuous data point. Results are in pixels. This represents how much the user moved their mouse before completing the objective.</p>
-        <p>For this statistical analysis, we want to prove that users moved their mouse less on site B than on site A. We can use a two-sample, one-sided t-test for this. </p>
-        <p><b>Null Hypothesis (H0)</b> is that there is no significant difference in mouse movement between Site A and Site B.</p>
-        <p><b>Alternative Hypothesis (HA)</b> is that our edits made it so that users on site B moved their mouse significantly less than users on Site A.</p>
-        <p>My <b>prediction</b> is that we will prove our HA because many stylistic and visual edits were made, making the users have to search less for their objective.</p>
-    </div>
-    <div class="section-shadow">
-        <h3>Mouse Movement - Two Sample, One Sided T-test - Data Summary</h3>
-        <img class="image-small" alt="graph showing mouse movement data" src="./assets/mouse.png"/>
-        <p>The average movement on page A is 6471.423px. The variance for page A is 19773316.8. The average movement on page B is 2435.399 px. The variance for page B is 452799.514. We use these statistics to complete a T-test which gives us a Degrees of Freedom of 23.155. We also got a t-score of 4.297. This indicates a significant spread between the two groups. A positive number specifically means that Site B's movement is less than site A's. Finally, we also got a p-value of 1-0.0001327. This is less than 1-0.05, so <b>we can reject the null hypothesis. The edits made to site B led users to move their mouse significantly less than users of site A.</b></p>
-    </div>
-    <div class="section-border">
-        <h1>Results:</h1>
-        <p>In all, we rejected all of the null hypotheses. This shows that Site B is probably a better site than Site A when it comes to completing the assigned objective. That last bit is very important. We do not know any information about how sites A and B performed for other tasks. Some of the edits we made could have improved one task but greately worsened others. This is important to consider as we continue to work. In a real world scenario, this would only be the start! From here, many more alternatives could be tested. I believe that website B is the greater site because of the readability improvements. These further tests could show what exactly is the most readable or intuitive method of showing doctor appointments. Additionally, in further testing it is very likely that sometimes not all variables pass the null hypothesis. In these scenarios, it is up to the designer and team to figure out what the suitable next step is.   </p>
-        <p>I really enjoyed this project because it gave me the ability to actually go ahead and complete something that I had only heard about. I was able to ground the theoretical into the practical! Now, I am just excited to get started on my next test!
-        </p>
-    </div>
-    </main>
-    
-    <footer>
-    </footer>
 </body>
 </html>
