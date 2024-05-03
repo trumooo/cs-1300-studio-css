@@ -7,7 +7,7 @@ body {
 
 /* Add styles for the bio section */
 .bio {
-    background-image: url('assets/bio2.jpg');
+    background-image: url('../assets/bio2.jpg');
     padding: 50px;
     text-align: center; /* Center text horizontally */
 }
@@ -47,7 +47,7 @@ header {
     color: #2C3E50;
     padding: 20px 0;
     text-align: center;
-    background-image: url('assets/puzzle-pattern.png');
+    background-image: url('../assets/puzzle-pattern.png');
 }
 
 header h1 {
