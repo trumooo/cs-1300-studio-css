@@ -7,9 +7,17 @@ body {
 
 header {
     color: #2C3E50;
-    padding: 20px 0;
-    text-align: center;
+    /* padding: 20px 0; */
+    /* text-align: center; */
     background-image: url('../assets/puzzle-pattern.png');
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 15px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.6); /* Adds a shadow */
+    background-size: cover; /* Ensures the background covers the area */
+    background-position: center; /* Centers the background image */
+    }
+    
 }
 
 header h1 {
@@ -19,12 +27,18 @@ header h1 {
 
 .tagline {
     font-size: 18px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
 }
 
 .bio {
     background-image: url('../assets/bio2.jpg');
     padding: 50px;
+    padding-top: 60px;
     text-align: center;
+    box-shadow: #2C3E50;
 }
 
 .bio-content {
@@ -39,6 +53,11 @@ header h1 {
     margin-right: 20px;
 }
 
+.bio-container p {
+    margin-bottom: 0;
+}
+
+
 .bio-text {
     max-width: 500px;
     text-align: left;
@@ -49,7 +68,7 @@ header h1 {
     line-height: 1.5;
 }
 
-.projects, .puzzle-game {
+.projects, .resume {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,10 +76,46 @@ header h1 {
     padding: 50px 0;
 }
 
-.projects h2, .puzzle-game h2 {
+.projects h2, .resume h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
+.bio-container{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2C3E50;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 
 .container {
     display: flex;
@@ -71,6 +126,7 @@ header h1 {
 }
 
 .project-button, .puzzle-piece, .target-position {
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: transparent;
@@ -80,8 +136,41 @@ header h1 {
     border-radius: 20px;
     overflow: visible;
     transition: transform 0.3s ease;
+    display: flex;
+    
 }
 
+.project-button .button-text {
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, -50%); /* Ensures centering regardless of text length */
+    color: white;  /* Choose a color that stands out over your images */
+    font-size: 24px;  /* Adjust size as needed */
+    font-weight: bold; /* Makes text bold */
+    z-index: 15;  /* Ensures text appears above the image */
+    visibility: visible;
+    flex-wrap: nowrap;
+    text-align: center;
+    opacity: 1;
+}
+
+.one .button-text{
+    left: 60%;
+    top: 20%;
+}
+
+.two .button-text{
+    left: 90%;
+    top: 20%;
+}
+.three .button-text{
+    left: 55%;
+    top: 50%;
+}
+.four .button-text{
+    left: 85%;
+    top: 90%;
+}
 .project-button img {
     display: block;
     width: 300px;
@@ -120,6 +209,17 @@ header h1 {
 }
 .word {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tagline{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+
+
 }
 
 

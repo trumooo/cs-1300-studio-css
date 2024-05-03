@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <nav>
+    <ul>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+    </ul>
+    <script src="scroll.js"></script>
+
+</nav>
+<section  id="bio" class="bio">
   <header>
     <div class="bio-container">
       <div class="word">
@@ -27,15 +37,12 @@
         <div class="tile" draggable="true">H<span>4</span></div>
         <div class="tile" draggable="true">A<span>1</span></div>
         <div class="tile" draggable="true">M<span>3</span></div>
+        <div class="space"></div> 
         <script src="scrabble.js"></script>
-
+        <p class="subline">Try and move around the letters!</p>
+        </div>
+        <p class="tagline">Building Products One Piece at a Time</p>
     </div>
-      <p class="tagline">Building Products One Piece at a Time</p>
-    </div>
-  </header>
-  
-  <main>
-    <section class="bio">
       <div class="bio-container">
         <div class="bio-content">
           <img src="assets/profile-picture.jpg" alt="Truman Cunningham">
@@ -44,32 +51,42 @@
           </div>
         </div>
       </div>
+    </header>
     </section>
+    <main>
     
-    <section class="projects">
+    <section id="projects" class="projects">
       <h2>Projects</h2>
       <div class="space"></div> 
       <div class="container">
         <button class="project-button one " id="project1">
             <img src="assets/puzzle.png" alt="Project 1">
+            <div class="first">
+              <span class="button-text">DriverAI Content Organization</span>
+            </div>
         </button>
         
         <button class="project-button two" id="project2">
             <img src="assets/puzzle.png" alt="Project 2">
+            <span class="button-text">Warner Brothers Discovery</span>
+
         </button>
         
         <button class="project-button three" id="project3">
             <img src="assets/puzzle.png" alt="Project 3">
+            <span class="button-text">Adaptive Redesign</span>
         </button>
         
         <button class="project-button four" id="project4">
             <img src="assets/puzzle.png" alt="Project 4">
+            <span class="button-text">Local Honey Finder</span>
+
         </button>
       </div>
     </section>
     
     
-    <section class="puzzle-game">
+    <section id="resume" class="resume">
       <div class="container">
           <h2>Puzzle Game</h2>
           <div class="puzzle-section">
