@@ -1,0 +1,290 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA; /* Light gray background */
+}
+
+header {
+    color: #2C3E50;
+    /* padding: 20px 0; */
+    /* text-align: center; */
+    background-image: url('../assets/puzzle-pattern.png');
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 15px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.6); /* Adds a shadow */
+    background-size: cover; /* Ensures the background covers the area */
+    background-position: center; /* Centers the background image */
+    }
+
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 18px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+.bio {
+    background-image: url('../assets/bio2.jpg');
+    padding: 50px;
+    padding-top: 60px;
+    text-align: center;
+    box-shadow: #2C3E50;
+}
+
+.bio-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-content img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.bio-container p {
+    margin-bottom: 0;
+}
+
+
+.bio-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.bio-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.projects, .resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F9FA;
+    padding: 50px 0;
+}
+
+.projects h2, .resume h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.bio-container{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2C3E50;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.project-button, .puzzle-piece, .target-position {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    border-radius: 20px;
+    overflow: visible;
+    transition: transform 0.3s ease;
+    display: flex;
+    
+}
+
+.project-button .button-text {
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, -50%); /* Ensures centering regardless of text length */
+    color: white;  /* Choose a color that stands out over your images */
+    font-size: 24px;  /* Adjust size as needed */
+    font-weight: bold; /* Makes text bold */
+    z-index: 15;  /* Ensures text appears above the image */
+    visibility: visible;
+    flex-wrap: nowrap;
+    text-align: center;
+    opacity: 1;
+}
+
+.one .button-text{
+    left: 60%;
+    top: 20%;
+}
+
+.two .button-text{
+    left: 90%;
+    top: 20%;
+}
+.three .button-text{
+    left: 55%;
+    top: 50%;
+}
+.four .button-text{
+    left: 85%;
+    top: 90%;
+}
+.project-button img {
+    display: block;
+    width: 300px;
+    height: auto;
+    border-radius: 20px; /* Rounded corners, adjust as needed */
+    transition: transform 0.3s ease; /* Smooth transformation */
+}
+.tile span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #333;
+}
+.hide {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+.space {
+    width: 50px;
+    height: 50px;
+}
+.tile {
+    width: 50px;
+    height: 50px;
+    background-color: #decba4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid #9c805b;
+    margin: 2px;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+.word {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tagline{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+
+
+}
+
+
+.one img {
+    transform: rotate(270deg); /* Rotate image within the button */
+    position: relative;
+    bottom: 60px;
+    left:0px;
+
+}
+
+.two img {
+    transform: rotate(0deg); 
+    position: relative;
+    bottom: 22px;
+    left:16px;
+}
+
+.three img {
+    transform: rotate(180deg); /* Rotate image within the button */
+    position: relative;
+    bottom: 45px;
+    right:39px;
+}
+
+.four img {
+    transform: rotate(90deg); /* Rotate image within the button */
+    position: relative;
+    bottom: 7px;
+    right:23px;
+}
+
+
+.one:hover {
+    transform: scale(1.1) translate(-80px, -80px); /* Scale up on hover */
+    z-index: 1000;
+}
+.two:hover {
+    transform: scale(1.1) translate(80px, -80px); /* Scale up on hover */
+    z-index: 1000;
+}
+.four:hover {
+    transform: scale(1.1) translate(80px, 80px); /* Scale up on hover */
+    z-index: 1000;
+}
+.three:hover {
+    transform: scale(1.1) translate(-80px, 80px); /* Scale up on hover */
+    z-index: 1000;
+}
+
+.puzzle-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.target-position {
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #2C3E50;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.target-position.hovered {
+    border-color: #FFA500;
+}
