@@ -5,44 +5,6 @@ body {
     background-color: #F8F9FA; /* Light gray background */
 }
 
-/* Add styles for the bio section */
-.bio {
-    background-image: url('../assets/bio2.jpg');
-    padding: 50px;
-    text-align: center; /* Center text horizontally */
-}
-
-.bio-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bio-content img {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 20px; /* Add some space between image and text */
-}
-
-.bio-text {
-    max-width: 500px; /* Adjust maximum line size as needed */
-    text-align: left; /* Align text to the left */
-}
-
-.bio-text p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-    grid-gap: 0px; /* Space between grid items */ 
-    width: 1420px;
-}
-
-
-
 header {
     color: #2C3E50;
     padding: 20px 0;
@@ -59,84 +21,89 @@ header h1 {
     font-size: 18px;
 }
 
-.projects {
-    padding: 50px 0;
+.bio {
+    background-image: url('../assets/bio2.jpg');
+    padding: 50px;
     text-align: center;
 }
 
-.projects h2 {
+.bio-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-content img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.bio-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.bio-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.projects, .puzzle-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F9FA;
+    padding: 50px 0;
+}
+
+.projects h2, .puzzle-game h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.project-button {
-    width: 100%; /* Ensures buttons expand to fill their grid areas */
-    height: 150px; /* Optional: adjust based on your design needs */
-    background-color: #f4f4f4; /* Optional: background color for the buttons */
-    border: none; /* Removes default button border */
-    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
-    background: none;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.project-button, .puzzle-piece, .target-position {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+    margin: 0px;
+    border-radius: 20px;
     overflow: visible;
+    transition: transform 0.3s ease;
 }
 
 .project-button img {
     display: block;
-    border-radius: 20px; /* Adjust radius for rounded corners */
-    transition: transform 0.3s ease, z-index 0s;
-    z-index: 1;
+    width: 300px;
+    height: auto;
+    border-radius: 20px; /* Rounded corners, adjust as needed */
+    transition: transform 0.3s ease; /* Smooth transformation */
 }
-.one {
-    width: 485px;
-    height: 354px;
-    position: relative;
-    left: 220px;
-    top: 15px;
-    transform: rotate(270deg);
-    z-index: 1;
+.tile span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #333;
 }
-
-.two {
-    width: 485px;
-    height: 354px;
-    /* transform: rotate(90deg); */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the transform */
-    position: relative;
-    right: 163px;
-    top: 113px;
-    z-index: 1;
-
+.hide {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
 }
-.three {
-    width: 485px;
-    height: 354px;
-    left: 120px;
-    bottom: 14px;
-    position: relative;
-    transform: rotate(180deg);
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the transform */
-    z-index: 1;
-
+.space {
+    width: 50px;
+    height: 50px;
 }
-
-.four {
-    width: 485px;
-    height: 354px;
-    right: 262px;
-    top: 83px;
-    transform: rotate(90deg);
-    position: relative;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the transform */
-    z-index: 1;
-
-}
-
-
-
-.word {
-    display: flex;
-}
-
 .tile {
     width: 50px;
     height: 50px;
@@ -151,57 +118,74 @@ header h1 {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
 }
-.space {
-    width: 50px;
-    height: 50px;
+.word {
+    display: flex;
 }
 
-.hide {
-    opacity: 0.2;
-    transition: opacity 0.3s ease;
-}
-.tile span {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    font-size: 12px;
-    color: #333;
+
+.one img {
+    transform: rotate(270deg); /* Rotate image within the button */
+    position: relative;
+    bottom: 60px;
+    left:0px;
+
 }
 
-.project-button:hover img {
+.two img {
+    transform: rotate(0deg); 
+    position: relative;
+    bottom: 22px;
+    left:16px;
+}
+
+.three img {
+    transform: rotate(180deg); /* Rotate image within the button */
+    position: relative;
+    bottom: 45px;
+    right:39px;
+}
+
+.four img {
+    transform: rotate(90deg); /* Rotate image within the button */
+    position: relative;
+    bottom: 7px;
+    right:23px;
+}
+
+
+.one:hover {
+    transform: scale(1.1) translate(-80px, -80px); /* Scale up on hover */
+    z-index: 1000;
+}
+.two:hover {
     transform: scale(1.1) translate(80px, -80px); /* Scale up on hover */
     z-index: 1000;
 }
-
-
-
-.puzzle-piece, .target-position {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    border: 1px solid #ccc; /* Add border to distinguish pieces */
-    background-image: url('assets/resume.png'); /* Background image */
-    background-size: 300px 300px; /* Adjust size to match puzzle image */
+.four:hover {
+    transform: scale(1.1) translate(80px, 80px); /* Scale up on hover */
+    z-index: 1000;
 }
-/* Existing CSS styles remain unchanged */
+.three:hover {
+    transform: scale(1.1) translate(-80px, 80px); /* Scale up on hover */
+    z-index: 1000;
+}
 
 .puzzle-section {
-    margin-bottom: 20px; /* Add some space between puzzle sections */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .target-position {
-    width: 150px; /* Set width of target positions */
-    height: 150px; /* Same height as puzzle piece */
-    margin: 5px;
-    border: 1px dashed #2C3E50; /* Dashed border */
-    background-color: #fff; /* White background */
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #2C3E50;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: border-color 0.3s ease;
-    cursor: pointer; /* Change cursor to pointer */
+    cursor: pointer;
 }
 
 .target-position.hovered {
-    border-color: #FFA500; /* Orange border color when hovered */
+    border-color: #FFA500;
 }
