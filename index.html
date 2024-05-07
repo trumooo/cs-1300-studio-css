@@ -1,113 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Truman Cunningham's Puzzle Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
 
 </head>
-<body>
-  <nav>
-    <ul>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-    </ul>
-    <script src="scroll.js"></script>
+
+<nav>
+  <ul>
+    <li><a href="#bio">Bio</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+  </ul>
+  <script src="scroll.js"></script>
 </nav>
-<section  id="bio" class="bio">
-  <header>
-    <div class="bio-container">
-      <div class="word">
-        <div class="tile" draggable="true">T<span>1</span></div>
-        <div class="tile" draggable="true">R<span>1</span></div>
-        <div class="tile" draggable="true">U<span>1</span></div>
-        <div class="tile" draggable="true">M<span>3</span></div>
-        <div class="tile" draggable="true">A<span>1</span></div>
-        <div class="tile" draggable="true">N<span>1</span></div>
-        <div class="space"></div> 
-        <div class="tile" draggable="true">C<span>3</span></div>
-        <div class="tile" draggable="true">U<span>1</span></div>
-        <div class="tile" draggable="true">N<span>1</span></div>
-        <div class="tile" draggable="true">N<span>1</span></div>
-        <div class="tile" draggable="true">I<span>1</span></div>
-        <div class="tile" draggable="true">N<span>4</span></div>
-        <div class="tile" draggable="true">G<span>2</span></div>
-        <div class="tile" draggable="true">H<span>4</span></div>
-        <div class="tile" draggable="true">A<span>1</span></div>
-        <div class="tile" draggable="true">M<span>3</span></div>
-        <div class="space"></div> 
-        <script src="scrabble.js"></script>
-        <p class="subline">Try and move around the letters!</p>
+
+<body>
+  <section id="bio" class="bio">
+    <header>
+      <div class="bio-container">
+        <div class="word">
+          <div class="tile" draggable="true">T<span>1</span></div>
+          <div class="tile" draggable="true">R<span>1</span></div>
+          <div class="tile" draggable="true">U<span>1</span></div>
+          <div class="tile" draggable="true">M<span>3</span></div>
+          <div class="tile" draggable="true">A<span>1</span></div>
+          <div class="tile" draggable="true">N<span>1</span></div>
+          <div class="space"></div>
+          <div class="tile" draggable="true">C<span>3</span></div>
+          <div class="tile" draggable="true">U<span>1</span></div>
+          <div class="tile" draggable="true">N<span>1</span></div>
+          <div class="tile" draggable="true">N<span>1</span></div>
+          <div class="tile" draggable="true">I<span>1</span></div>
+          <div class="tile" draggable="true">N<span>4</span></div>
+          <div class="tile" draggable="true">G<span>2</span></div>
+          <div class="tile" draggable="true">H<span>4</span></div>
+          <div class="tile" draggable="true">A<span>1</span></div>
+          <div class="tile" draggable="true">M<span>3</span></div>
+          <!-- <div class="space"></div>  -->
+          <script src="scrabble.js"></script>
         </div>
         <p class="tagline">Building Products One Piece at a Time</p>
-    </div>
-      <div class="bio-container">
-        <div class="bio-content">
-          <img src="assets/profile-picture.jpg" alt="Truman Cunningham">
-          <div class="bio-text">
-            <p>I'm Truman Cunningham, a product manager with a passion for problem-solving. With a background in engineering, I thrive on tackling complex challenges and finding innovative solutions. Whether it's optimizing processes, improving user experiences, or launching new products, I'm always up for the next puzzle.</p>
-          </div>
-        </div>
-      </div>
-    </header>
-    </section>
-    <main>
-    
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="space"></div> 
-      <div class="container">
-        <button class="project-button one " id="project1">
-            <img src="assets/puzzle.png" alt="Project 1">
-            <div class="first">
-              <span class="button-text">DriverAI Content Organization</span>
-            </div>
-        </button>
-        
-        <button class="project-button two" id="project2">
-            <img src="assets/puzzle.png" alt="Project 2">
-            <span class="button-text">Warner Brothers Discovery</span>
+        <p class="subline">Try and move around the letters!</p>
 
-        </button>
-        
-        <button class="project-button three" id="project3">
-            <img src="assets/puzzle.png" alt="Project 3">
-            <span class="button-text">Adaptive Redesign</span>
-        </button>
-        
-        <button class="project-button four" id="project4">
-            <img src="assets/puzzle.png" alt="Project 4">
-            <span class="button-text">Local Honey Finder</span>
-
-        </button>
-      </div>
-    </section>
-    
-    
-    <section id="resume" class="resume">
-      <div class="container">
-          <h2>Puzzle Game</h2>
-          <div class="puzzle-section">
-              <h3>Starting Position</h3>
-              <div id="puzzle-container">
-                  <!-- Puzzle pieces will be added dynamically here -->
-              </div>
-          </div>
-          
-          <div class="puzzle-section">
-              <h3>Target Positions</h3>
-              <div id="target-container">
-                  <!-- Target positions will be added dynamically here -->
-              </div>
-          </div>
-          <script src="puzzle.js"></script>
-      </div>
   </section>
+  </header>
+
+  <main>
+    <section id="projects" class="projects">
+        <h1>Projects</h1>
+        <br>
+        <div class="container">
+            <div class="project-container">
+                <button class="project-button one" id="project1">
+                    <img src="assets/puzzle5.png" alt="Project 1">
+                    <div class="button-text">DriverAI Content Organization</div>
+                    <p style="transform: translate(-32%, -70%);">UX Design, Content Organization</p> <!-- Skills -->
+
+                </button>
+            </div>
+
+            <div class="project-container">
+                <button class="project-button two" id="project2">
+                    <img src="assets/puzzle3.png" alt="Project 2">
+                    <div class="button-text">Warner Brothers Discovery</div>
+                    <p style="transform: translate(20%, 50%);">UX Design, Content Organization</p> <!-- Skills -->
+                </button>
+            </div>
+
+            <div class="project-container">
+                <button class="project-button three" id="project3">
+                    <img src="assets/puzzle3.png" alt="Project 3">
+                    <div class="button-text">Adaptive Redesign</div>
+                    <p style="transform: translate(-40%, 50%);">UX Design, Content Organization</p> <!-- Skills -->
+
+                </button>
+            </div>
+
+            <div class="project-container">
+                <button class="project-button four" id="project4">
+                    <img src="assets/puzzle5.png" alt="Project 4">
+                    <div class="button-text">Local Honey Finder</div>
+                    <p style="transform: translate(20%, 180%);">UX Design, Content Organization</p> <!-- Skills -->
+
+                    
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
   
-  </main>
-  
+
 </body>
+
 </html>

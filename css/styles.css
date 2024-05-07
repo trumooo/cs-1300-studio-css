@@ -2,25 +2,50 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F8F9FA; /* Light gray background */
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 
 header {
-    color: #2C3E50;
-    /* padding: 20px 0; */
+    color: #12182A;
+    padding: 20px;
+    margin-top: 5px;
     /* text-align: center; */
-    background-image: url('../assets/puzzle-pattern.png');
-    padding-bottom: 10px;
     text-align: center;
-    border-radius: 15px; /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.6); /* Adds a shadow */
-    background-size: cover; /* Ensures the background covers the area */
-    background-position: center; /* Centers the background image */
-    }
+    border-radius: 15px;
+    /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.6);
+    /* Adds a shadow */
+    background-color: #EDF7F6;
+    /* background-image: url('../assets/puzzle-pattern-crop.png'); */
+
+}
+.project-button p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 14px;
+    color: #FFB140;
+    font-weight: bold;
+  }
+
+body {
+    /* background-image: url('../assets/bio2.jpg'); */
+    background-color: #8AACCD;
+}
 
 
-header h1 {
+ h1 {
     font-size: 36px;
+    color: #12182A;
     margin: 0;
 }
 
@@ -33,64 +58,72 @@ header h1 {
 }
 
 .bio {
-    background-image: url('../assets/bio2.jpg');
-    padding: 50px;
-    padding-top: 60px;
+    /* background-image: url('../assets/bio2.jpg');n */
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
     text-align: center;
     box-shadow: #2C3E50;
 }
 
-.bio-content {
+
+
+.projects {
+    display: flex;
+    /* align-content: center; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    color: #12182A;
+    padding: 20px;
+    width: 500px;
+    height: fit-content;
+    margin-top: -5px;
+    text-align: center;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 8px rgba(44, 62, 80, 0.6); */
+    /* background-image: url('../assets/palet.png'); */
+
+}
+main {
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    width: 90VW;
+    height: 50vw;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* background-image: url('../assets/palet.png'); */
+    background-color: #EDF7F6;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.6);
     display: flex;
     align-items: center;
+    justify-content: top;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+}
+.projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
     justify-content: center;
 }
 
-.bio-content img {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-}
-
-.bio-container p {
-    margin-bottom: 0;
-}
 
 
-.bio-text {
-    max-width: 500px;
-    text-align: left;
-}
-
-.bio-text p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.projects, .resume {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #F8F9FA;
-    padding: 50px 0;
-}
-
-.projects h2, .resume h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.bio-container{
-    margin-left: 20px;
-    margin-top: 40px;
-}
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #2C3E50;
+    background: #2660A4;
     z-index: 1000;
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -100,13 +133,19 @@ nav ul {
     display: flex;
     justify-content: right;
 }
-
+.idk{
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 nav ul li {
     margin: 0 20px;
 }
 
 nav a {
-    color: white;
+    color: #EDF7F6;
     text-decoration: none;
     font-size: 18px;
 }
@@ -119,12 +158,12 @@ nav a:hover {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    /* gap: -10px; */
     max-width: 400px;
 }
 
-.project-button, .puzzle-piece, .target-position {
+.project-button{
     position: relative;
     width: 200px;
     height: 200px;
@@ -135,63 +174,79 @@ nav a:hover {
     border-radius: 20px;
     overflow: visible;
     transition: transform 0.3s ease;
-    display: flex;
-    
+    display: flex
 }
+
 
 .project-button .button-text {
     position: absolute;
     width: 100%;
-    transform: translate(-50%, -50%); /* Ensures centering regardless of text length */
-    color: white;  /* Choose a color that stands out over your images */
-    font-size: 24px;  /* Adjust size as needed */
-    font-weight: bold; /* Makes text bold */
-    z-index: 15;  /* Ensures text appears above the image */
+    transform: translate(-50%, -50%);
+    /* Ensures centering regardless of text length */
+    color: #EDF7F6;
+    /* Choose a color that stands out over your images */
+    font-size: 24px;
+    /* Adjust size as needed */
+    font-weight: bold;
+    /* Makes text bold */
+    z-index: 15;
+    /* Ensures text appears above the image */
     visibility: visible;
     flex-wrap: nowrap;
     text-align: center;
     opacity: 1;
 }
 
-.one .button-text{
+.one .button-text {
     left: 60%;
     top: 20%;
 }
 
-.two .button-text{
+
+
+.two .button-text {
     left: 90%;
     top: 20%;
 }
-.three .button-text{
+
+.three .button-text {
     left: 55%;
     top: 50%;
 }
-.four .button-text{
+
+.four .button-text {
     left: 85%;
     top: 90%;
 }
+
 .project-button img {
     display: block;
     width: 300px;
     height: auto;
-    border-radius: 20px; /* Rounded corners, adjust as needed */
-    transition: transform 0.3s ease; /* Smooth transformation */
+    border-radius: 20px;
+    /* Rounded corners, adjust as needed */
+    transition: transform 0.3s ease;
+    /* Smooth transformation */
 }
+
 .tile span {
     position: absolute;
     bottom: 5px;
     right: 5px;
     font-size: 12px;
-    color: #333;
+    color: #050609;
 }
+
 .hide {
-    opacity: 0.2;
+    opacity: 0.3;
     transition: opacity 0.3s ease;
 }
+
 .space {
     width: 50px;
     height: 50px;
 }
+
 .tile {
     width: 50px;
     height: 50px;
@@ -206,12 +261,15 @@ nav a:hover {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
 }
+
 .word {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: #12182A;
 }
-.tagline{
+
+.tagline {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -223,50 +281,60 @@ nav a:hover {
 
 
 .one img {
-    transform: rotate(270deg); /* Rotate image within the button */
+    transform: rotate(270deg);
+    /* Rotate image within the button */
     position: relative;
     bottom: 60px;
-    left:0px;
+    left: 0px;
 
 }
 
 .two img {
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
     position: relative;
     bottom: 22px;
-    left:16px;
+    left: 16px;
 }
 
 .three img {
-    transform: rotate(180deg); /* Rotate image within the button */
+    transform: rotate(180deg);
+    /* Rotate image within the button */
     position: relative;
     bottom: 45px;
-    right:39px;
+    right: 39px;
 }
 
 .four img {
-    transform: rotate(90deg); /* Rotate image within the button */
+    transform: rotate(90deg);
+    /* Rotate image within the button */
     position: relative;
     bottom: 7px;
-    right:23px;
+    right: 23px;
 }
 
 
 .one:hover {
-    transform: scale(1.1) translate(-80px, -80px); /* Scale up on hover */
-    z-index: 1000;
+    transform: scale(1.1) translate(-80px, -80px);
+    /* Scale up on hover */
+    z-index: 999;
 }
+
 .two:hover {
-    transform: scale(1.1) translate(80px, -80px); /* Scale up on hover */
-    z-index: 1000;
+    transform: scale(1.1) translate(80px, -80px);
+    /* Scale up on hover */
+    z-index: 999;
 }
+
 .four:hover {
-    transform: scale(1.1) translate(80px, 80px); /* Scale up on hover */
-    z-index: 1000;
+    transform: scale(1.1) translate(80px, 80px);
+    /* Scale up on hover */
+    z-index: 999;
 }
+
 .three:hover {
-    transform: scale(1.1) translate(-80px, 80px); /* Scale up on hover */
-    z-index: 1000;
+    transform: scale(1.1) translate(-80px, 80px);
+    /* Scale up on hover */
+    z-index: 999;
 }
 
 .puzzle-section {
@@ -277,8 +345,8 @@ nav a:hover {
 .target-position {
     width: 150px;
     height: 150px;
-    border: 1px dashed #2C3E50;
-    background-color: #fff;
+    border: 1px dashed #12182A;
+    background-color: #EDF7F6;
     display: flex;
     justify-content: center;
     align-items: center;
