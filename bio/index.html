@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Truman Cunningham's Bio</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
   <nav>
     <ul>
@@ -15,38 +13,93 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#resume">Resume</a></li>
     </ul>
-    <script src="scroll.js"></script>
   </nav>
 
-
-<body>
-  
- 
-
   <div class="bio-container">
-    
-    
-    
     <div class="bio-content">
       <header>
         <h1>About Me</h1>
       </header>
       <div class="bio-text">
         <div class="bio-image">
-          <img src="assets/linked_in.jpeg" alt="Truman Cunningham">
+          <img src="assets/linked_in.jpeg" alt="Truman Cunningham Pic" loading="lazy">
         </div>
-        
         <div class="bio-description">
-          <p>Howdy, </p>
-          <p>I am Truman Cunningham. I'm an aspiring Product Manager. </p>
-          <p>I love building user-centered products and sol. </p>
-
-
+          <div class="line special">
+            <div class="word">Hi there!</div>
+          </div>
+          <div class="line">
+            <div class="word">I</div>
+            <div class="word">am</div>
+            <div class="word">Truman</div>
+            <div class="word">Cunningham</div>
+          </div>
+          <div class="line">
+            <div class="word">Associate</div>
+            <div class="word">Product</div>
+            <div class="word">Manager</div>
+          </div>
+          <div class="line">
+            <div class="word">Senior</div>
+            <div class="word">@</div>
+            <div class="word">Brown</div>
+            <div class="word">University</div>
+          </div>
+          <div class="line">
+            <div class="word">Beekeeper</div>
+            <div class="word">and</div>
+            <div class="word">Puzzle</div>
+            <div class="word">Lover</div>
+          </div>
         </div>
       </div>
+
+      
+      
+          <div id="resume" class="resume-container">
+            <h2>Resume</h2>
+            <div>
+              <a href="docs/Truman_Cunningham_Website.pdf" download="Truman_Cunningham_Resume">Download Resume</a>
+            </div>
+            <iframe src="docs/Truman_Cunningham_Website.pdf" width="70%" height="1000px" style="border:none;"></iframe>
+          </div>
+          
     </div>
   </div>
 
+  <script src="scroll.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lines = document.querySelectorAll('.line');
+        let current = 0;
+    
+        function rotateOpacity() {
+            // Remove faded class from all lines
+            lines.forEach(line => line.classList.remove('faded'));
+    
+            // Add faded class to all lines except the current one
+            lines.forEach((line, index) => {
+                if (index !== current) {
+                    line.classList.add('faded');
+                }
+            });
+    
+            // Update current line
+            current = (current + 1) % lines.length;
+        }
+    
+        // Set interval for rotating opacity
+        const interval = setInterval(rotateOpacity, 1200); // Rotate every 2 seconds
+    
+        // Clear interval on hover to stop rotation
+        lines.forEach(line => {
+            line.addEventListener('mouseenter', () => {
+                clearInterval(interval);
+                lines.forEach(line => line.classList.remove('faded'));
+            });
+        });
+    });
+    </script>
+    
 </body>
-
 </html>

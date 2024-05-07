@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cabin', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #8AACCD;
@@ -32,6 +32,9 @@ nav a {
     text-decoration: none;
     font-size: 18px;
 }
+.resume-container {
+    margin: 20px;
+}
 
 nav a:hover {
     text-decoration: underline;
@@ -60,7 +63,7 @@ nav a:hover {
     border: 2px solid #9c805b;
     margin: 2px;
     font-size: 24px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Cabin', sans-serif;
     font-weight: bold;
 }
 .tile span {
@@ -73,14 +76,24 @@ nav a:hover {
 
   
 .bio-content {
+    display: flex;
+    flex-direction: column;
     background-color: #EDF7F6;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
+        width: 75vw;
+        
+
+
   }
   
   .bio-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 20px;
+    gap: 25px;
   }
   
   .bio-image {
@@ -90,13 +103,34 @@ nav a:hover {
 
   }
   
-  .bio-description {
+  .bio-description {display: flex;
+
+    flex-direction: column;
+    align-items: center;
+        justify-content: space-between;
     overflow: hidden; /* Clear the float */
-    width: 40vw;
-    font-size: large;
+    font-size: xx-large;
+    margin-right: 15px;
+
   }
   
   .bio-description p {
     text-align: left; /* Align description text to the left */
   }
-  
+  .line {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity change */
+
+  }
+  .faded {
+    opacity: 0.5; /* Reduced opacity for non-active lines */}
+
+.line.special {
+    justify-content: center;
+    align-items: center;
+    color: #12182A;
+    left: 50%;
+}
+/* .line:hover() */
