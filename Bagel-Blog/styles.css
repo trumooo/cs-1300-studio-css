@@ -1,9 +1,54 @@
-/* General Reset */
-body, h1, h2, h3, h4, p, div, img {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
+.imagefoot{
+    width: 200px;
+    background-image: url('./assets/bagelhappy.png');
+    background-size: cover;  /* Cover the entire area of the div, you can use 'contain' to fit the entire image */
+    background-position: center; /* Adjust this to change which part of the image is visible */
+    overflow: hidden;
+}
+body {
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 18px; /* Increased base font size from default (typically 16px) */
+}
+
+/* Adjust specific elements if necessary to scale appropriately */
+h1 {
+    font-size: 2.1em; /* Scales based on new body font size */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+p, li {
+    font-size: 1em; /* Maintains proportional size to body */
+}
+
+/* Ensure media queries and other specific styles are adjusted if needed */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Slightly smaller on mobile devices */
+    }
+
+    h1, h2, h3, h4, p {
+        padding: 5px 10px;
+    }
+
+    .image-large {
+        max-width: 100%;
+        height: auto;
+    }
 }
 .shadow-box {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -14,19 +59,19 @@ body, h1, h2, h3, h4, p, div, img {
 }
 
 
-body {
-    font-family: 'Arial', sans-serif; /* Clean and modern font */
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
 
 header {
     background-color: #205493;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    border-radius: 15px;
+}
+header  h2{
+    color: #ffc107;
+    /* padding: 10px 0; */
+    text-align: center;
+    font-size: 2em;
 }
 
 main {
@@ -57,6 +102,9 @@ h1, h2, h3, h4, p {
     padding: 10px 20px;
 }
 
+.high-fi h3 {
+    text-align: center;
+}
 .note, .image, .image-small, .image-large {
     padding: 20px;
 }
@@ -77,12 +125,12 @@ a:hover {
     text-decoration: underline;
 }
 
-.main, .note, footer div, .image, .image-small, .image-large {
+.main, footer div, .image, .image-small, .image-large {
     border-radius: 15px; /* Rounded corners with a radius of 15px */
     overflow: hidden; /* Ensures no inner content spills outside the rounded corners */
 }
 
-main, .note, footer {
+main, footer {
     border-radius: 15px;
 }
 
@@ -106,3 +154,119 @@ main, .note, footer {
     }
 }
 /* Apply rounded corners to all container elements and images */
+/* General styling for the wireframe container */
+.wireframe {
+    text-align: left; /* Centers text and inline elements within the wireframe div */
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Aligns flex children (like divs) in the center horizontally */
+    margin: 20px; /* Adds space around each wireframe section */
+    padding: 20px; /* Padding inside each wireframe section */
+    background-color: #ffffff; /* Sets a background color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Specific styles for image container within each wireframe */
+.wireframe .tablet.images, 
+.wireframe .mobile.images, 
+.wireframe .desktop.images {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal layout */
+    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+    justify-content: center; /* Centers items along the horizontal line */
+    gap: 10px; /* Space between items */
+}
+
+/* Image styling for proper sizing and display */
+.image-small {
+    width: 100%; /* Full width of its container by default */
+    max-width: 200px; /* Limits how large the images can grow */
+    height: auto; /* Maintains aspect ratio */
+}
+.video-player {
+    position: relative;
+    left: 34%;
+    height: 40vw;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .wireframe .tablet.images, 
+    .wireframe .mobile.images, 
+    .wireframe .desktop.images {
+        flex-direction: column; /* Stacks images vertically on smaller screens */
+    }
+
+    .image-small {
+        max-width: 95%; /* Allows image to be slightly smaller than container width */
+    }
+}
+/* Skills list styling */
+.skills {
+    background-color: transparent; /* Light background for the section */
+}
+
+.skills ul {
+    display: flex; /* Aligns list items horizontally */
+    justify-content: center; /* Center list items horizontally */
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 10; /* Removes default margin */
+
+}
+
+.skills li {
+    background-color: #023047; /* Dark background for contrast */
+    color: #ffffff; /* White text for readability */
+    padding: 10px 20px; /* Padding inside each list item */
+    margin: 0 10px; /* Space between list items */
+    border-radius: 20px; /* Rounded corners for a soft, modern look */
+    font-size: 1rem; /* Appropriate font size */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Adds depth with a shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.skills li:hover {
+    transform: scale(1.1); /* Changes cursor to indicate interactivity */
+}
+
+/* Define three distinct styles for rotation */
+.brainstorm {
+    background-color: #f8f9fa; /* Very light gray */
+    border-left: 5px solid #007bff; /* Bright blue border on the left */
+    color: #495057; /* Dark gray text for good contrast */
+}
+.left{
+    text-align: left;
+}
+.problems {
+    background-color: #fdfdfe; /* Even lighter gray, almost white */
+    border: 5px solid #28a745; /* Green border for a fresh look */
+    color: #343a40; /* Slightly lighter gray text */
+}
+
+.styleguide {
+    background-color: #f4f4f5; /* Off-white background */
+    border-left: 5px solid #ffc107; /* Amber border for a vibrant touch */
+    color: #212529; /* Almost black text for maximum readability */
+}
+
+/* Base styling for sections using these styles */
+.brainstorm {
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Heading style within sections */
+.distinct-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Paragraph style within sections */
+.distinct-section p {
+    line-height: 1.6;
+    font-size: 1rem;
+}

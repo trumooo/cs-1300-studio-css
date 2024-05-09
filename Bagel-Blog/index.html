@@ -9,116 +9,141 @@
 <body>
     <header>
         <h1>How to Buy Bagels in 2024</h1>
+            <h2>Fixing up a forgotten website for my favorite bagel spot</h2>
+        <div class="skills">
+            <ul>
+                <li>User Experience</li>
+                <li>Design</li>
+                <li>Iteratation</li>
+            </ul>
+        </div>
     </header>
     <main>
-        <div class="note">
-            <h2>Fixing up a forgotten website for my favorite bagel spot</h2>
-            <p>This journal entry will start with an analysis, move to a generative process, then to a low-fi design, followed by a high-fi design, and finally a launched dummy site.</p>
+        <div>
+            <h3>The Problem</h3>
+            <p>Bagel Gourmet is the name of my favorite place to grab a hot breakfast sandwich.</p>
+            <p>The only problem is that while their food is great, their website leaves a bad taste in my mouth.</p>
+            <img class="image" alt="bagel gourmet old website" src="./assets/bagelgourmet.png"/>
+            <a class="note"><p><i>Update: there website has been actually taken down since I did this project, but feel free to look at it<a href="https://web.archive.org/web/20230329033832/http://bagelgourmetcafe.com/">here</a>.</i></p>
+            <p>I thought this website would definetly deter prospective customers who might think the store is going to be old and outdated based on their website, so they need a website that matches the quality of their food.</p>
+        </div>
+        <div class="problems">
+            <h3>What specifically doesn't work about the old website?</h3>
+            <p>It is one thing to say that the website is messy and has poor style, but I wanted to dig deeper.</p>
+            <ul>
+                
+                <li>There is no way to build a cart and order.</li>
+                <li>There is no consistent coloring or sizing.</li>
+                <li>There are no clear and distinct navigational tools.</li>
+                <li>The layout is asymmetrical and heavily weighted.</li>
+                <li>6. No consistent HTML tag hierarchy.</li>
+                <li>This is a menu for a bagel restraunt and it starts with Mexican options.</li>
+            </ul>
+            <p>These pain points helped me understand the specific parts of the website that I wanted to improve. With them listed out, I can now better understand how to modernize this website.</p>
+        </div>
+        <div class="brainstorm">
+            <h3>Brainstorming New Ideas</h3> 
+            <p>Now, I new what I wanted to improve upon, but I didn't know what I wanted the new website to look like. I only knew what it couldn't be.</p>
+            <p>I sat down and quickly iterate through a few rough sketches. My main thought when completing these was that I wanted them to be modern and concise.</p>
+            <img class="image" alt="nine sketches of new websites" src="./assets/ninealternatives.png"/>
+            <p>The two ideas that I was really drawn to were #2 and #3. The grid-based ordering system was a simple, yet clean design that could be applied well to almost any store.</p>
+            <p>But, I did think that the universality of the design might be a downside. I wanted to create something that represented the great, unique quality of the store, and I wasn't quite sure that the grid design would do that.</p>
+            <p>This is why #3 stood out to me. In #3, the bagel would be visually filled by your toppings as you create your bagel sandwich.</p>
+            <p>The idea of ordering your food using a text-based menu with a strong visual metaphor was very compelling.</p>
+            <p>With these details, I realized that I could combine these ideas into different segments of the user experience.</p>            
+        </div>
+        <div class="wireframing">
+            <div class="wireframe mobile">
+
+            <h3>How the Sandwich Gets Made</h3>
+            <p>Next, I took a step back and thought about how users would access the website.</p>
+            <p>After interviewing customers, I heard that most customers would like to order ahead from home.</p>
+            <p>Customers mentioned wishing to order from either mobile or desktop devices, so I new that my next step would be to the website have a distinct adaptive design.</p>
+
+                <h4>Mobile Site</h4>
+                <div class="wireframe mobile images">
+                    <img class="image-small" alt="drawing of bagel selector for mobile" src="./assets/mobiledrawing1.png"/>
+                    <img class="image-small" alt="drawing of bagel selector for mobile after tap" src="./assets/mobiledrawing2.png"/>
+                    <img class="image-small" alt="drawing of bagel filler when empty" src="./assets/mobiledrawing3.png"/>
+                    <img class="image-small" alt="drawing of bagel filler when full" src="./assets/mobiledrawing4.png"/>
+                </div>
+                <p>For the mobile display, I wanted to focus scrollable menu as the central display. I collapsed most of the less used features into accessory buttons that were spaced around the edge of the screen.</p>
+            </div>
+            <div class="wireframe tablet">
+                <h4>Tablet Site</h4>
+                <div class="wireframe tablet images">
+                    <img class="image-small" alt="drawing of bagel selector for tablet" src="./assets/tablet1.png"/>
+                    <img class="image-small" alt="drawing of bagel selector for tablet after tap" src="./assets/tablet2.png"/>
+                    <img class="image-small" alt="drawing of bagel filler when empty" src="./assets/tablet3.png"/>
+                    <img class="image-small" alt="drawing of bagel filler when full" src="./assets/tablet4.png"/>
+                </div>
+                <p>I wanted the tablet display to be more comprehensive. Here, the larger screen resolution can be used to have a permanent navigation bar on the side, while the main section can be used to find items.</p>
+            </div>
+            <div class="wireframe desktop">
+                <h4>Desktop Site</h4>
+                <div class="wireframe desktop images">
+                    <img class="image-small" alt="drawing of bagel selector for desktop" src="./assets/desktop1.png"/>
+                    <img class="image-small" alt="drawing of bagel selector for desktop after tap" src="./assets/desktop2.png"/>
+                    <img class="image-small" alt="drawing of bagel filler when empty" src="./assets/desktop3.png"/>
+                    <img class="image-small" alt="drawing of bagel filler when full" src="./assets/desktop4.png"/>
+                </div>
+                <p>The desktop display needed to provide the user with the most information. To do this, I brought out the bag to the left side of the screen. I also transitioned over to a horizontal navigation bar to further the visual hierarchy of the website.</p>
+            </div>
+        
+        </div>
+        <div class="styleguide">
+            <h3>Final Touches</h3>
+            <p>With my wireframes created, I now better understood what my final design would look like. However, the wireframe processes did make me want to increase the visual similarity across devices.</p>
+            <p>As a result, I created a style guide which definned what the key components of my website would look like. </p>
+            <div class="styleguideimages images">
+                <img class="image" alt="Style Guide page 1" src="./assets/styleguide1.png"/>
+                <img class="image" alt="Style Guide page 2" src="./assets/styleguide2.png"/>
+            </div>
+            <p>The fonts and elements were chosen as to evoke the look of the brick and mortar store. This would help the store have a unified brand experience both online and in-person .</p>
+            <p>Specifically, I opted for a blue-toned website which matches Bagel Gourmet's store interior. I also went for a medium, rounded, sans-serif font to emphasize the casual, updated nature of the website.</p></p>
+        </div>
+        <div class="high-fi">
+            <h2>Orders Up</h2>
+            <div class="mobile_hi">
+                <h3>Mobile</h3>
+                <img class="image-large" alt="mobile version high fidelity design" src="./assets/bagel-hi.png"/>
+            </div>
+            <div class="tablet-hi">
+                <h3>Tablet</h3>
+                <img class="image-large" alt="tablet version high fidelity design" src="./assets/tablet-hi.png"/>
+            </div>
+            <div class="desktop-hi">
+                <h3>Desktop</h3>
+                <img class="image-large" alt="Desktop version high fidelity design" src="./assets/desktop-hi.png"/>
+            </div>
+            <p>The final high fidelity designs show the progress of the website. However, I still was struggling to fully understand the mobile-user experience, so I decided to make the it interactable.</p>
+            <video class="video-player" autoplay muted loop>
+                <source src="assets/movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>I was initailly hesitant about using the sandwhich filler feature on a mobile device, but user testing on store customers made me feel much more confident about its implementation </p>
+            <p>Users specifically mentioned how the visual design both "makes sense" and makes the processes more "fun!"</p>
+        </div>
+
+        <div>
+            <p>To get a sense of what the final HTML and CSS of the website would look like, I decided to create an adaptive version of the <a href="https://trumooo.github.io/bagel/">homepage</a>.</p>
         </div>
     </main>
     <footer>
-        <div>
-            <p>My favorite spot to grab a hot breakfast sandwich is Bagel Gourmet.</p>
-            <p>They are a small bagel spot local to Providence, Rhode Island, and whenever I need a pick me up, they are my go-to spot.</p>
-            <p>However, their website looks like this:</p>
-            <img class="image" alt="bagel gourmet old website" src="./assets/bagelgourmet.png"/>
-            <p><i>Update:</i> there website has been actually taken down since I started this project, but feel free to look at it <a href="https://web.archive.org/web/20230329033832/http://bagelgourmetcafe.com/">here</a>.</p>
-            <p>Which looks a little outdated. There are a lot of confusing images overlapping eachother and various fonts randomly used. So, I decided to try and fix it. But, first I needed to know what to redesign.</p>
+        <h3>Take Aways</h3>
+        <ul>
+        <li>
+                <p><bold>Accessibility:</bold> I believe that bagels should be for everyone! However, the orignal website was largely inaccessible. It had limited visual hierarchy, unclear color contrast, and miscatagorized html tags. In all, it scored a 65 in Lighthouse.
+                In my designs, I was able to help fix these issues. Ultimately, my version scored a 100 in Lighthouse and used clear html tags.
+                </p>
+        </li>
+        <li>
+            <p><bold>Functionality:</bold> The new website is user focused. This means that I assume that individuals coming to the website are specifically looking for bagels. As a result, I removed the mexican section of the menu to streamiline the ordering process.
+            </p>
+        </li>
+        </ul>
+        <div class="imagefoot">
         </div>
-        <div>
-            <h2>What are the main pain points?</h2>
-            <h4>1. This is a menu for a bagel website that starts with Mexican options.</h4>
-            <h4>2. There is no way to build a cart and order.</h4>
-            <h4>3. There is no consistent coloring or sizing.</h4>
-            <h4>4. The layout is asymmetrical and heavily weighted.</h4>
-            <h4>5. There are no clear and distinct navigational tools.</h4>
-            <h4>6. No consistent HTML tag hierarchy.</h4>
-            <p>With these points clearly listed, I moved onto brainstorming new alternatives.</p>
-        </div>
-        <div>
-            <h2>Designing the Site</h2>
-            <p>I began by trying to generate 9 different new menu ideas in 9 minutes. Most of these can probably be glossed over. However, a few were particularly interesting.</p>
-            <img class="image" alt="nine sketches of new websites" src="./assets/ninealternatives.png"/>
-            <h4>I liked the idea of a simple grid-based ordering system (#2)</h4>
-            <p>I think this is a fairly clean design with little downside. It is intuitive and frequently used. This did make the website not very unique, but that would probably be okay for a bagel place.</p>
-            <h4>Additionally, I also really liked the idea of a text-based bagel sandwich menu (#3).</h4>
-            <p>Here, I see the bagel is visually filled by your toppings, so the more you type the more fillings are placed within your bagel. This only really works for making a bagel sandwich so I thought it could be a cool customization interface.</p>
-            <p>After a few more sketches, I compiled these ideas into my wireframes!</p>
-        </div>
-        <div>
-            <img class="image-small" alt="single drawing of bagel selector" src="./assets/sketch1.png"/>
-            <img class="image-small" alt="single drawing of filler when empty" src="./assets/sketch2.png"/>
-            <img class="image-small" alt="single drawing of filler when full" src="./assets/sketch3.png"/>
-        </div>
-        <h2>Wireframing</h2>
-        <p>The wireframing was divided into 3 different websites. Each was supposed to be accessible from a different device. The three chosen were <b>mobile, tablet, and desktop</b>.</p>
-        <p>Each needed to be slightly different, as to best adapt to the device's dimensions while still being cohesive in design.</p>
-        <p>I also went ahead and defined all the future elements and pages that I would want to build. While those features are outside of the scope of this project, they did help me better understand the user's journey.</p>
-        <div>
-            <h3>Mobile</h3>
-            <img class="image-small" alt="drawing of bagel selector for mobile" src="./assets/mobiledrawing1.png"/>
-            <img class="image-small" alt="drawing of bagel selector for mobile after tap" src="./assets/mobiledrawing2.png"/>
-            <img class="image-small" alt="drawing of bagel filler when empty" src="./assets/mobiledrawing3.png"/>
-            <img class="image-small" alt="drawing of bagel filler when full" src="./assets/mobiledrawing4.png"/>
-            <p>I wanted the mobile display to be fairly minimalist with buttons to redirect to different sites. Thus, the main section of the screen would just be the scrollable menu display.</p>
-        </div>
-        <div>
-            <h3>Tablet</h3>
-            <img class="image-small" alt="drawing of bagel selector for tablet" src="./assets/tablet1.png"/>
-            <img class="image-small" alt="drawing of bagel selector for tablet after tap" src="./assets/tablet2.png"/>
-            <img class="image-small" alt="drawing of bagel filler when empty" src="./assets/tablet3.png"/>
-            <img class="image-small" alt="drawing of bagel filler when full" src="./assets/tablet4.png"/>
-            <p>I wanted the tablet display to be more comprehensive. Here, the larger screen resolution can be used to have a permanent navigation bar on the side, while the main section can be used to find items.</p>
-        </div>
-        <div>
-            <h3>Desktop</h3>
-            <img class="image-small" alt="drawing of bagel selector for desktop" src="./assets/desktop1.png"/>
-            <img class="image-small" alt="drawing of bagel selector for desktop after tap" src="./assets/desktop2.png"/>
-            <img class="image-small" alt="drawing of bagel filler when empty" src="./assets/desktop3.png"/>
-            <img class="image-small" alt="drawing of bagel filler when full" src="./assets/desktop4.png"/>
-            <p>The Desktop display needed to provide the user with the most information. I thought it made sense to bring the bag page out and lock it into the left side of the screen. Doing this meant raising up the navigation bar into being horizontal. I also wanted a lot of bagels to be visible at once.</p>
-        </div>
-        <p>With the wireframing complete, I then moved on to creating the high fidelity designs for the website in Figma.</p>
-        <img class="image" alt="Style Guide page 1" src="./assets/styleguide1.png"/>
-        <img class="image" alt="Style Guide page 2" src="./assets/styleguide2.png"/>
-        <h2>High Fidelity Design</h2>
-        <p>Before I set out to create the high-fidelity mockups, I wanted to create a style guide. This would help me better understand the brand identity that I was building. It would also help me remain consistent throughout my designs. I opted for a blue-toned website which matches Bagel Gourmet's store interior. I also went for a medium, curvy, sans-serif font to emphasize the casual, updated nature of the website.</p>
-        <div>
-            <h3>Mobile</h3>
-            <img class="image-large" alt="mobile version high fidelity design" src="./assets/bagel-hi.png"/>
-            <p>I actually went ahead and made the mobile version fully interactable which can be seen at this <a href="https://youtube.com/shorts/hXzNjDe9rFM?si=C-5A7mq_f9L1BViH">link</a>.</p>
-        </div>
-        <div>
-            <h3>Tablet</h3>
-            <img class="image-large" alt="tablet version high fidelity design" src="./assets/tablet-hi.png"/>
-        </div>
-        <div>
-            <h3>Desktop</h3>
-            <img class="image-large" alt="Desktop version high fidelity design" src="./assets/desktop-hi.png"/>
-        </div>
-        <p>After making these I felt pretty good about how the website was looking, so I decided that I was ready to move onto the HTML and CSS.</p>
-        <p><b>However,</b> I do want to highlight that the scope of this project was just to redesign a single page. Given that the original Bagel Gourmet did not have any ordering method, I decided to focus solely on building out the menu page. Maybe later I will make the text box bagel filler because I really do enjoy how it looks!</p>
-        <h2>HTML and CSS</h2>
-        <p>A few things did change as I made the website. First, I changed the tablet background to being the same white tone as the other versions to further cohesion.</p>
-        <p>I also made the desktop bagel cards much smaller, so two to four could fit onto a monitor.</p>
-        <p>If I were to keep working on the website, I would want to build out the other pages that I wireframed and drafted as well as the pop-up option for customizing items on a click.</p>
-        <p>Here is the link to the final website: <a href="https://trumooo.github.io/bagels/">https://trumooo.github.io/bagels/</a>!</p>
-        
-        <h2>Comparison between new and original</h2>
-        <h4>Accessibility:</h4>
-        <p>The original website scored a 64 in Lighthouse for accessibility. This was largely due to it not using the proper html tags for its architecture. Additionally, there were 19 null text boxes present throughout the page. It also had 12 contrast problems, with 20 general alerts.</p>
-        <p>My version gets a 100 in Lighthouse for accessibility! The html is heirarchal, and each image has unique and descriptive alt tags.</p>
-        <h4>Design:</h4>
-        <p>There were 6 main pain points highlighted in the original design. This design includes a cart to build orders, has consistant tone and coloring, and clear navigational tools.</p>
-        <p>It also helps users buy bagels instead of mexican food, which I think is particularly important. </p>
-        <h4>I hope you enjoyed the project and go get a bagel soon!</h4>
-        <h2>What did I learn from this project?</h2>
-        <h4>1. That the style guide is incredibly helpful and much nicer than going in without a plan.</h4>
-        <h4>2. That building dynamic html on a monitor can warp the pixel dimensions, so freuqently switch displays if possible.</h4>
-        <h4>3. I need to do more work into better understanding javascript, so I can later build out more advanced elements.</h4>
-        <h4>4. Websites need to be updated frequently, so everything stays fully functional and as accessible as possible.</h4>
-        <img class="image" alt="image of a bagel with a smiley face" src="./assets/bagelhappy.png"/>
-
-    </footer>
-</body>
+        </footer>
+        </body>
 </html>
