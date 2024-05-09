@@ -13,6 +13,39 @@ body {
     padding: 20px;
     font-size: 18px; /* Increased base font size from default (typically 16px) */
 }
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2660A4;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #EDF7F6;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+  
 
 /* Adjust specific elements if necessary to scale appropriately */
 h1 {
