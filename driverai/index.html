@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<nav>
+    <ul>
+      <li><a href="https://trumooo.github.io/projects">Projects</a></li>
+      <li><a href="https://trumooo.github.io/bio">About Me</a></li>
+    </ul>
+  </nav>
+<body>
+    <header>
+        <h1>Learning How to Drive (rAI)</h1>
+            <h2>Redesigning the Content Organization for DriverAI - a 2024 Y Combinator Startup</h2>
+        <div class="skills">
+            <ul>
+                <li>Roadmapping</li>
+                <li>Realworld</li>
+                <li>Design</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h3>The Problem</h3>
+            <p>DriverAI is a young startup that seeks to use generative AI to create documentation for large codebases. They have only been in operation for a few months and are looking to implemnt some user feedback that they have recieved.</p>
+            <p><b>For 3-weeks, I worked with a team and DriverAI to create a new method of content organziation.</b></p>
+        </div>
+        <div class="problems">
+
+            <h3>What specifically doesn't work about the old organziation?</h3>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="assets/workspaces.png" alt="old workspaces page">
+                    <img src="assets/codebases.png" alt="old cobases page">
+                    <img src="assets/hub.png" alt="old hub page">
+                    <img src="assets/techdocs.png" alt="old tech docs page">
+                    <img src="assets/resources.png" alt="old resources page">
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <script>
+                let slideIndex = 1;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
+
+            </script>
+            
+            <p> These are the five pages dedicated to content organzation AI generated document. The previous design requires users to be familiar and confident with all of the layers. Here were some of the problems we identified with the current scenario:
+            </p>
+            <ul>
+                <li>Heavily nested design.</li>
+                <li>Unclear terminology - "codebases" vs "workspaces"</li>
+                <li>No central work area</li>
+                <li>Too much detail for some personas - Product Managers vs Software Engineers</li>
+                <li>Sparse Resource Page</li>
+                <li>Monochromatic design</li>
+
+            </ul>
+            <p>After discussing these points to the founding engineer, we decided to focus on the first five as the monochrome theme was constant throughout the entire company.</p>
+            <p>In addition to the points we had raised, user feedback revealed that users struggle to know they can edit the generated documents and can view their code next to the documents.</p>
+        </div>
+        <div class="brainstorm">
+            <h3>Getting into the Driver's Seat</h3> 
+            <p>Now, my team and I sat down and drafted a few sketches. Each of us generated two completely new user flows.</p>
+            <p>I tried to create one more grounded workflow, so the other could be more expiremental.</p>
+            <p>For this first round, I specically focused on generating new ways to interact with the existing technology.</p>
+            <div class="side">
+
+            
+            <img class="image" alt="Two new workflows" src="assets/brainstorming.png"/> 
+            <img class="image" alt="Two new workflows by my peer" src="assets/notmine.png"/> 
+        </div>
+            <p>Here I started to think about new ways to prompt the user to know that they could directly edit the documents and see the code.</p>
+            <p>A peer of mine created the sketches on the right, which inspired me to consider a dynamic sidebar system to help reduce nesting. I then chose to specifically redesign the page that was formerly called tech docs. I decided that this page would be combined with the hub to serve as a central workplace for a user.</p>
+            <p>I called this new page "The Dashboard." Here, users would be able to view both generated technical documentation but also generated notes—like startup guides or system breakdowns. I wanted to have the user view both of these on a single page because users both are fundemental to the work needs of users. While they were on seperate pages, users reported frequently jumping around, so it made sense to remove this pain point.</p>
+            <p>With these details, I began working on my low fidelity designs.</p>            
+        </div>
+        <div class="wireframing">
+            <div class="wireframe mobile">
+
+            <h3>Starting the Journey</h3>
+                <img class="lowfi_image" alt="low fidelity figma" src="assets/orignallowfi.png"/>
+                <p>I created this low fidelity mockup in Figma. On the <b>left</b>, is a modified navigation bar. Previously, this was just a nested tree and search bar to find for technical documents.
+                I had included a new section at the bottom for saved documents/notes, so users can quickly access their most frequently used pages.
+                I also had placed the notes tree above the code tree, so users could now find both documents using the familiar strucutre.
+                I added a new section at the top where the user could swap personas. This way the technical document would change depending on who was viewing the page to best meet their needs.</p>
+                <p>In the <b>center</b>, I kept the document largely unchanged. However, I did add a small button on the top right where users could click to edit the document. This would just help users know that they can directly modify the generated technical documents and notes.</p>
+                <p>On the <b>right</b>, I had the source code be open by default. It is still colapsable, but this way users can better understand DriverAi's features.</p>
+                <h4>Side by Side</h4>
+                <div class="side">
+                    <img class="image-small" alt="original DriverAI tech docs page" src="assets/techdocs.png"/>
+                    &#8594;
+                    <img class="image-small" alt="low fidelity figma" src="assets/orignallowfi.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="styleguide">
+            <h3>Re-Routing</h3>
+            <p>With my wireframes created, I wanted to reachout to our stakeholders and get feedback on my designs. From this conversation, I learned that the stacked navigation trees would not work because some users have thousands of documents. I also got the feedback that the select persona button probably could be placed within a profile, rather than on the documents themselves.</p>
+            <p>With this feedback, I created a revised version of my low fidelity mockups.</p>
+            <H4>Original and Revised</H4>
+            <div class="side">
+                <img class="image-small" alt="original low fidelity figma" src="assets/orignallowfi.png"/>
+                &#8594;
+                <img class="image-small" alt="revised low fidelity figma" src="assets/lowfi.png"/>
+            </div>
+            <p>Here, the most significant change is the addition of a toggle between the code and notes navigation tree. I also moved the favorite section up to the top to reflect the high priority of the section. </p>
+        </div>
+        
+            <div class="pit">
+                <h3>Pit Stop</h3>
+                <p>At this point, I created a style guide to help me better understand the brand identity before I began the high fidelity mock ups.</p>
+                <div class="styleguideimages images">
+                    <img class="image" alt="Style Guide page 1" src="assets/styleguide1.png"/>
+                    <img class="image" alt="Style Guide page 2" src="assets/styleguide2.png"/>
+                </div>
+                <p>I largely reverse engineered this style guide from the current DriverAI website. Specifically, both the color gradiation and font were directly taken from the orignal page. However, I did create the button, chip, and banner components to fit the demands of my new page.</p>
+            </div>
+            <div class="high-fi">
+            <h2>Arriving at Our Destination</h2>
+            <p>This is the demo of my redesign of the tech docs page. The notable changes from the revised low fidelity are the inclusion of a button inbetween the document and source code that will allow the user to quickly swap which section is on the left and right.</p>
+            <p>In the video below, you can also see the left-hand dynamic that my peers designed directly implemeneted with mine. This  has replaced the codebases and workspace systems and help users to quickly swap between projects as they work.</p>
+            <video class="video-player" autoplay muted loop>
+                <source src="assets/demo.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+    <footer>
+        <h3>Take Aways</h3>
+        <ul>
+        <li>
+                <p><b>Communication:</b> The only reason I was able to end up with my final design was through many rounds of feedback. Specifically, I relied heavily upon the conversations I had with key stakeholders, users, and my team to design the best interface. Every conversation I had left me with a new idea or a better understanding of the problem.
+                </p>
+        </li>
+        <li>
+            <p><b>Results:</b> The end design sucessfully satisfied the four most critical parts of user feedback. 
+            </p>
+        </li>
+        </ul>
+        </footer>
+        </body>
+</html>
