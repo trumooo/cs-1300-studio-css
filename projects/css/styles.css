@@ -1,5 +1,5 @@
 body {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F8F9FA;
@@ -12,7 +12,7 @@ body {
 
 }
 body {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #8AACCD;
@@ -289,8 +289,8 @@ nav a:hover {
     width: 100%;
     transform: translate(-50%, -50%);
     /* Ensures centering regardless of text length */
-    -webkit-text-fill-color: #EDF7F6;
-    -webkit-text-stroke: .8px;
+    color: #000000; 
+    /* -webkit-text-stroke: .8px; */
     /* Choose a color that stands out over your images */
     font-size: 25px;
     /* Adjust size as needed */
