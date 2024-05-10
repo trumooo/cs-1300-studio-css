@@ -1,0 +1,437 @@
+.imagefoot{
+    width: 200px;
+    background-image: url('./assets/bagelhappy.png');
+    background-size: cover;  /* Cover the entire area of the div, you can use 'contain' to fit the entire image */
+    background-position: center; /* Adjust this to change which part of the image is visible */
+    overflow: hidden;
+}
+body {
+    font-family: 'Cabin', sans-serif; /* Clean and modern font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 18px; /* Increased base font size from default (typically 16px) */
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2660A4;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #EDF7F6;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+  
+
+/* Adjust specific elements if necessary to scale appropriately */
+h1 {
+    font-size: 2.1em; /* Scales based on new body font size */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+p, li {
+    font-size: 1em; /* Maintains proportional size to body */
+}
+
+/* Ensure media queries and other specific styles are adjusted if needed */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Slightly smaller on mobile devices */
+    }
+
+    h1, h2, h3, h4, p {
+        padding: 5px 10px;
+    }
+
+    .image-large {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.shadow-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 700px; /* Adjust based on your requirements */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    width: 100%; /* Ensure images fill the carousel */
+    display: none; /* Hide all images initially */
+}
+
+.carousel-images img.active {
+    display: block; /* Only show the active image */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; /* Prevent text selection */
+    background-color: rgba(0,0,0,0.8);
+    opacity: .5;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    opacity: 1;
+}
+
+
+header {
+    background-color: #205493;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+header  h2{
+    position: relative;
+    color: #ffc107;
+    /* padding: 10px 0; */
+    justify-content: center;
+    width: 890px;
+    left: 17%;
+    font-size: 2em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #ffffff; /* Set background to white */
+    color: #000000; /* Set text color to black */
+    text-align: left;
+    padding: 10px 10px;
+}
+
+footer a {
+    color: #205493; /* Maintain the link color for contrast */
+}
+
+footer a:hover {
+    color: #ff6347; /* Change hover color to something noticeable */
+}
+
+
+h1, h2, h3, h4, p {
+    padding: 10px 20px;
+}
+
+.high-fi h3 {
+    text-align: center;
+}
+.note, .image-large {
+    padding: 20px;
+}
+
+.image, .image-large {
+    max-width: 40vw;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+a {
+    color: #205493;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.lowfi_image{
+    position: relative;
+    max-width: 60vw;
+    left: 10%
+}
+
+.main, footer div, .image, .image-small, .image-large {
+    border-radius: 15px; /* Rounded corners with a radius of 15px */
+    overflow: hidden; /* Ensures no inner content spills outside the rounded corners */
+}
+
+main, footer {
+    border-radius: 15px;
+}
+
+/* Additional specific adjustments if needed */
+.image, .image-small, .image-large {
+    border-radius: 15px; /* Slightly smaller radius for images */
+}
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    body, main {
+        padding: 10px;
+    }
+
+    h1, h2, h3, h4, p {
+        padding: 5px 10px;
+    }
+
+    .image-large {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* Apply rounded corners to all container elements and images */
+/* General styling for the wireframe container */
+.wireframe {
+    text-align: left; /* Centers text and inline elements within the wireframe div */
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Aligns flex children (like divs) in the center horizontally */
+    margin: 20px; /* Adds space around each wireframe section */
+    padding: 20px; /* Padding inside each wireframe section */
+    background-color: #ffffff; /* Sets a background color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Specific styles for image container within each wireframe */
+.wireframe .tablet.images, 
+.wireframe .mobile.images, 
+.wireframe .desktop.images {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal layout */
+    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+    justify-content: center; /* Centers items along the horizontal line */
+    gap: 10px; /* Space between items */
+    width: 200px;
+    
+}
+
+/* Image styling for proper sizing and display */
+.image-small {
+    width: 100%; /* Full width of its container by default */
+    max-width: 800px; /* Limits how large the images can grow */
+    height: auto; /* Maintains aspect ratio */
+}
+.video-player {
+    position: relative;
+    left: 15%;
+    height: 38vw;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .wireframe .tablet.images, 
+    .wireframe .mobile.images, 
+    .wireframe .desktop.images {
+        flex-direction: column; /* Stacks images vertically on smaller screens */
+    }
+
+    .image-small {
+        max-width: 95%; /* Allows image to be slightly smaller than container width */
+    }
+}
+/* Skills list styling */
+.skills {
+    background-color: transparent; /* Light background for the section */
+}
+
+.skills ul {
+    display: flex; /* Aligns list items horizontally */
+    justify-content: center; /* Center list items horizontally */
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 10; /* Removes default margin */
+
+}
+
+.skills li {
+    background-color: #023047; /* Dark background for contrast */
+    color: #ffffff; /* White text for readability */
+    padding: 10px 20px; /* Padding inside each list item */
+    margin: 0 10px; /* Space between list items */
+    border-radius: 20px; /* Rounded corners for a soft, modern look */
+    font-size: 1rem; /* Appropriate font size */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Adds depth with a shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.skills li:hover {
+    transform: scale(1.1); /* Changes cursor to indicate interactivity */
+}
+
+/* Define three distinct styles for rotation */
+.brainstorm, .high-fi{
+    background-color: #f8f9fa; /* Very light gray */
+    border-left: 5px solid #007bff; /* Bright blue border on the left */
+    color: #495057; /* Dark gray text for good contrast */
+}
+.left{
+    text-align: left;
+}
+.problems {
+    background-color: #fdfdfe; /* Even lighter gray, almost white */
+    border: 5px solid #28a745; /* Green border for a fresh look */
+    color: #343a40; /* Slightly lighter gray text */
+}
+
+.styleguide {
+    background-color: #f4f4f5; /* Off-white background */
+    border-left: 5px solid #ffc107; /* Amber border for a vibrant touch */
+    color: #212529; /* Almost black text for maximum readability */
+}
+
+/* Base styling for sections using these styles */
+.brainstorm {
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Heading style within sections */
+.distinct-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Paragraph style within sections */
+.distinct-section p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+.image{
+    max-height: 40vw;
+}
+.side{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.image-small{
+    margin: 10px;
+}
+footer h3 {
+    margin-top: 0px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Arial', sans-serif;
+  }
+  .tabels{
+    display: flex;
+    justify-content: center;
+  }
+/* General Table Styles */
+table {
+    width: 100%; /* Full-width */
+    border-collapse: collapse; /* Ensures borders between cells are merged */
+    margin: 20px 0; /* Spacing around the table */
+    font-family: 'Comfortaa', sans-serif; /* Consistent font family */
+    background-color: #EDF7F6; /* Light background for the entire table */
+    color: #12182A; /* Primary text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Table Headers */
+th {
+    background-color: #2660A4; /* Darker shade for header */
+    color: #ffffff; /* White text color for contrast */
+    font-weight: bold; /* Make header text bold */
+    padding: 12px 15px; /* Padding within header cells */
+    text-align: left; /* Align text to the left */
+}
+
+/* Table Cells */
+td {
+    padding: 10px 15px; /* Padding within cells */
+    border-top: 1px solid #ddd; /* Light border for each row */
+    vertical-align: top; /* Align cell content to the top */
+}
+
+/* Hover Effect on Table Rows */
+tr:hover {
+    background-color: #f4f4f5; /* Light grey background on row hover for better interactivity */
+}
+
+/* Responsive Table Design */
+@media screen and (max-width: 768px) {
+    table, tbody, th, td, tr {
+        display: block; /* Block display to stack the table on smaller screens */
+    }
+
+    thead {
+        display: none; /* Hide the header row on small screens */
+    }
+
+    td {
+        position: relative; /* Needed for positioning the pseudo-element for labels */
+        padding-left: 50%; /* Make room for labels on the left */
+        text-align: right; /* Align text to the right */
+    }
+
+    td:before {
+        content: attr(data-label); /* Use data-label attribute value as content */
+        position: absolute;
+        left: 0;
+        width: 45%; /* Width of the label */
+        padding-left: 15px; /* Padding for label */
+        font-weight: bold; /* Bold font for labels */
+        text-align: left; /* Align label text to the left */
+        color: #2660A4; /* Match header color for labels */
+    }
+}
