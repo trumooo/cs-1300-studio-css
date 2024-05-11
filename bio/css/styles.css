@@ -119,7 +119,7 @@ nav a:hover {
   }
   .line {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     width: 450px;
     transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity change */
 
@@ -128,7 +128,7 @@ nav a:hover {
     opacity: 0.5; /* Reduced opacity for non-active lines */}
 
 .line.special {
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     color: #12182A;
     left: 50%;
