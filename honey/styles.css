@@ -435,3 +435,7 @@ tr:hover {
         color: #2660A4; /* Match header color for labels */
     }
 }
+a {
+    font-weight: bold;
+    color: darkblue;
+  }
