@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYRLE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Lyric Guessing Game</h1>
+        <div id="strikes-container">
+        </div>
+        <div id="phrase-container">
+            <p id="phrase"></p>
+        </div>
+        <div id="keyboard-container">
+            <div id="keyboard">
+                <div class="key-row">
+                    <button class="key" id="Q" onclick="guessLetter('Q')">Q</button>
+                    <button class="key" id="W" onclick="guessLetter('W')">W</button>
+                    <button class="key" id="E" onclick="guessLetter('E')">E</button>
+                    <button class="key" id="R" onclick="guessLetter('R')">R</button>
+                    <button class="key" id="T" onclick="guessLetter('T')">T</button>
+                    <button class="key" id="Y" onclick="guessLetter('Y')">Y</button>
+                    <button class="key" id="U" onclick="guessLetter('U')">U</button>
+                    <button class="key" id="I" onclick="guessLetter('I')">I</button>
+                    <button class="key" id="O" onclick="guessLetter('O')">O</button>
+                    <button class="key" id="P" onclick="guessLetter('P')">P</button>
+                </div>
+                <div class="key-row">
+                    <button class="key" id="A" onclick="guessLetter('A')">A</button>
+                    <button class="key" id="S" onclick="guessLetter('S')">S</button>
+                    <button class="key" id="D" onclick="guessLetter('D')">D</button>
+                    <button class="key" id="F" onclick="guessLetter('F')">F</button>
+                    <button class="key" id="G" onclick="guessLetter('G')">G</button>
+                    <button class="key" id="H" onclick="guessLetter('H')">H</button>
+                    <button class="key" id="J" onclick="guessLetter('J')">J</button>
+                    <button class="key" id="K" onclick="guessLetter('K')">K</button>
+                    <button class="key" id="L" onclick="guessLetter('L')">L</button>
+                </div>
+                <div class="key-row">
+                    <button class="key" id="Z" onclick="guessLetter('Z')">Z</button>
+                    <button class="key" id="X" onclick="guessLetter('X')">X</button>
+                    <button class="key" id="C" onclick="guessLetter('C')">C</button>
+                    <button class="key" id="V" onclick="guessLetter('V')">V</button>
+                    <button class="key" id="B" onclick="guessLetter('B')">B</button>
+                    <button class="key" id="N" onclick="guessLetter('N')">N</button>
+                    <button class="key" id="M" onclick="guessLetter('M')">M</button>
+                </div>
+            </div>
+    
+        </div>
+        <div id="game-status">
+            <p>Guessed Letters: <span id="guessed-letters"></span></p>
+            <p>Incorrect Tries: <span id="incorrect-tries"></span></p>
+        </div>
+        <div id="share-button-container">
+            <button id="share-button" onclick="shareGame()">Share Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

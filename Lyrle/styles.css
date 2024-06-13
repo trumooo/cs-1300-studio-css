@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#phrase-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#phrase {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#keyboard {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.key-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.key {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #333; /* Default color for letters */
+}
+
+.key.correct {
+    background-color: #5cb85c; /* Green background for correct guesses */
+    color: #fff; /* White color for letters on correct keys */
+}
+
+.key.incorrect {
+    background-color: #f0f0f0; /* Faded grey background for incorrect guesses */
+    color: #ccc; /* Light grey color for letters on incorrect keys */
+}
+
+.key.disabled {
+    cursor: default;
+}
+
+#hint-container {
+    margin-top: 20px;
+}
+
+#hint-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hint-button:hover {
+    background-color: #0056b3;
+}
+
+#hint {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#game-status {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#guessed-letters,
+#incorrect-tries {
+    font-weight: bold;
+}
+.space {
+    display: inline-block;
+    width: 1.0em; /* Adjust width to increase/decrease space */
+}
+
+#share-button-container {
+    margin-top: 20px;
+    text-align: center;
+}/* Add this style to adjust spacing for spaces in the phrase */
+#phrase span {
+    display: inline-block;
+    padding: 5px; /* Adjust padding as needed */
+    margin: 2px;
+    border: 1px solid #ccc; /* Border style for the outline box */
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+/* Adjust spacing for spaces */
+#phrase span[data-char=" "] {
+    padding: 5px 10px; /* Larger padding for spaces */
+}
+
+
+#share-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.check-mark {
+    color: #4CAF50;
+}
+.x-mark {
+    font-size: 1.5em;
+    color: red;
+}
+
+#share-button:hover {
+    background-color: #218838;
+}
+.title {
+    text-align: center;
+}
+#strikes-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.strike {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 50px;
+    color: red;
+}
