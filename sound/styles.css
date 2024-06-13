@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header and Titles */
+h1, h2, h3, h4, h5 {
+    color: #023047;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+h4, h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+    color: #fb8500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Structuring the main content */
+.note, .skills, .problems, .brainstorm, .wireframing, .styleguide, .high-fi {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.skills ul, .problems ul, footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li, .problems li, footer li {
+    background: #8ecae6;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    .wireframe img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.25rem;
+    }
+
+    .skills li, .problems li, footer li {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #023047;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Custom button styles */
+.genre-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #023047;
+    border: 2px solid #023047;
+}
+
+.genre-btn:hover {
+    background-color: #023047;
+    color: #fff;
+}
+/* Flexbox configuration for containers holding images */
+.div-images, .wireframe, .styleguideimages, .wireframe div, .high-fi div {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line as needed */
+    justify-content: center; /* Centers items along the line */
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 20px; /* Space between items */
+}
+
+/* Specific configurations for image containers to display images side by side */
+.wireframe .mobile.images, .wireframe .tablet.images, .wireframe .desktop.images, 
+.styleguideimages.images, .high-fi .mobile_hi, .high-fi .tablet-hi, .high-fi .desktop-hi {
+    flex-direction: row; /* Ensures items are laid out in a row */
+}
+
+.image, .image-small, .image-large {
+    width: 100%; /* Full width to cover flex container space when alone */
+    max-width: 400px; /* Maximum width to prevent overly large images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Ensuring images stay side by side on smaller screens */
+@media (max-width: 768px) {
+    .wireframe div.images, .styleguideimages.images, .high-fi .mobile_hi, .high

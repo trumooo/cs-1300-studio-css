@@ -100,10 +100,6 @@ body {
 #incorrect-tries {
     font-weight: bold;
 }
-.space {
-    display: inline-block;
-    width: 1.0em; /* Adjust width to increase/decrease space */
-}
 
 #share-button-container {
     margin-top: 20px;
@@ -147,22 +143,4 @@ body {
 }
 .title {
     text-align: center;
-}
-#strikes-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.strike {
-    width: 50px;
-    height: 50px;
-    margin: 0 5px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 50px;
-    color: red;
 }

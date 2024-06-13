@@ -1,6 +1,25 @@
 // Define your phrases here (you can expand this with more phrases)
 const phrases = [
-    "THEY'RE TRYING TO TELL ME HOW TO FEEL."
+    "HELLO WORLD",
+    "JAVASCRIPT IS FUN",
+    "GAME DEVELOPMENT",
+    "OPENAI IS AMAZING",
+    "PYTHON PROGRAMMING",
+    "WEB DEVELOPMENT",
+    "DATA SCIENCE",
+    "MACHINE LEARNING",
+    "ARTIFICIAL INTELLIGENCE",
+    "COMPUTER SCIENCE",
+    "ROBOTICS AND AI",
+    "CRYPTOGRAPHY",
+    "CYBERSECURITY",
+    "BLOCKCHAIN TECHNOLOGY",
+    "INTERNET OF THINGS",
+    "BIG DATA ANALYTICS",
+    "VIRTUAL REALITY",
+    "SMART CONTRACTS",
+    "NATURAL LANGUAGE PROCESSING",
+    "NEURAL NETWORKS"
 ];
 
 // Function to generate a random number mapping
@@ -14,7 +33,7 @@ function generateRandomNumberMapping(phrase) {
     }
 
     // Add mapping for space if needed
-    numberMapping[' '] = '   ';
+    numberMapping[' '] = ' ';
 
     return numberMapping;
 }
@@ -56,24 +75,6 @@ function startGame() {
         key.disabled = false;
         key.classList.remove("disabled", "correct", "incorrect");
     }
-
-    // Create strike indicators
-    updateStrikeIndicators();
-}
-
-// Function to update strike indicators
-function updateStrikeIndicators() {
-    let strikesContainer = document.getElementById("strikes-container");
-    strikesContainer.innerHTML = ""; // Clear previous indicators
-
-    for (let i = 0; i < 5; i++) {
-        let strikeElement = document.createElement("div");
-        strikeElement.classList.add("strike");
-        if (i < incorrectTries) {
-            strikeElement.textContent = "X";
-        }
-        strikesContainer.appendChild(strikeElement);
-    }
 }
 
 // Function to end the game
@@ -97,11 +98,15 @@ function endGame() {
 }
 
 // Function to share the game details
-// Function to share the game details
-// Function to share the game details
 function shareGame() {
+    // Original phrase without spaces
+    let originalPhrase = chosenPhrase.replace(/\s/g, '');
+
+    // Construct the tries list
+    let triesList = guessedLetters.join(", ");
+
     // Prepare the share message
-    let shareMessage = `Look what I decoded!\n\nEncrypted phrase: ${document.getElementById("phrase").textContent}\n\nGuesses: ${getGuessesSummary()}\n\nIncorrect Tries: ${incorrectTries}`;
+    let shareMessage = `Look what I decoded!\n\nInitial phrase: ${chosenPhrase}\n\nTries: ${triesList}`;
 
     if (navigator.share) {
         navigator.share({
@@ -117,22 +122,6 @@ function shareGame() {
     }
 }
 
-// Function to get a summary of guesses as ✔ and ✘
-function getGuessesSummary() {
-    let summary = "";
-    for (let i = 0; i < guessedLetters.length; i++) {
-        if (chosenPhrase.includes(guessedLetters[i])) {
-            summary += '✔'; // Correct guess
-        } else {
-            summary += '✘'; // Incorrect guess
-        }
-    }
-    return summary;
-}
-
-
-
-// Function to update the displayed phrase with mapped numbers and guessed letters
 // Function to update the displayed phrase with mapped numbers and guessed letters
 function updatePhraseDisplay() {
     let phraseDisplay = "";
@@ -140,23 +129,17 @@ function updatePhraseDisplay() {
         let originalChar = chosenPhrase[i];
         let mappedChar = numberMapping[originalChar.toUpperCase()];
 
-        if (/[A-Z]/.test(originalChar)) { // Check if the character is a letter
-            if (guessedLetters.includes(originalChar.toUpperCase())) {
-                phraseDisplay += `<span>${originalChar}</span>`; // Show the guessed letter in original form
-            } else {
-                phraseDisplay += `<span class="number">${mappedChar}</span>`; // Show the mapped number for unguessed characters
-            }
-        } else if (originalChar === ' ') { // Handle spaces
-            phraseDisplay += `<span class="space"></span>`; // Add a span with space class
-        } else { // Handle punctuation
-            phraseDisplay += originalChar; // Display punctuation directly
+        if (originalChar === " ") {
+            phraseDisplay += `<span data-char=" "> </span>`; // Add space with data-char attribute
+        } else if (guessedLetters.includes(originalChar.toUpperCase())) {
+            phraseDisplay += `<span>${originalChar}</span>`; // Show the guessed letter in original form
+        } else {
+            phraseDisplay += `<span class="number">${mappedChar}</span>`; // Show the mapped number for unguessed characters
         }
     }
 
     document.getElementById("phrase").innerHTML = phraseDisplay;
 }
-
-
 
 // Function to guess a letter
 function guessLetter(letter) {
@@ -211,9 +194,6 @@ function guessLetter(letter) {
         // Show a check mark for correct guesses
         document.getElementById("incorrect-tries").innerHTML += '<span class="check-mark">✔</span>';
     }
-
-    // Update strike indicators
-    updateStrikeIndicators();
 }
 
 // Start the game when the page loads
