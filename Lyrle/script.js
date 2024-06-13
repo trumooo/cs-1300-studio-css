@@ -1,13 +1,13 @@
 // Define your phrases here (you can expand this with more phrases)
 const phrases = [
-    "THEY'RE TRYING TO TELL ME HOW TO FEEL."
+    "I'M A MILLION DOLLAR BABY"
 ];
 
 // Mapping for artist, album, and song hints
 const hintMappings = {
-    'ARTIST': 'Taylor Swift',
-    'ALBUM': 'Fearless',
-    'SONG': 'Love Story'
+    'ARTIST': 'Tommy Richman',
+    'ALBUM': 'MILLION DOLLAR BABY',
+    'SONG': 'MILLION DOLLAR BABY'
 };
 
 // Function to generate a random number mapping
