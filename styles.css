@@ -23,11 +23,9 @@ body {
 }
 
 #phrase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    white-space: nowrap; /* Prevent line breaks within the phrase */
-    word-break: keep-all; /* Prevent line breaks within words */
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 #keyboard {
@@ -103,15 +101,24 @@ body {
     font-weight: bold;
 }
 
-.space {
-    display: inline-block;
-    width: 1.0em; /* Adjust width to increase/decrease space */
-}
-
 #share-button-container {
     margin-top: 20px;
     text-align: center;
+}/* Add this style to adjust spacing for spaces in the phrase */
+#phrase span {
+    display: inline-block;
+    padding: 5px; /* Adjust padding as needed */
+    margin: 2px;
+    border: 1px solid #ccc; /* Border style for the outline box */
+    border-radius: 5px;
+    font-size: 0.8em;
 }
+
+/* Adjust spacing for spaces */
+#phrase span[data-char=" "] {
+    padding: 5px 10px; /* Larger padding for spaces */
+}
+
 
 #share-button {
     padding: 10px 20px;
@@ -123,134 +130,13 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+.checkmark {
+    color: #4CAF50;
+}
 
 #share-button:hover {
     background-color: #218838;
 }
-
 .title {
     text-align: center;
-}
-
-#strikes-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.strike {
-    width: 50px;
-    height: 50px;
-    margin: 0 5px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 50px;
-    color: red;
-}
-
-/* Style for the phrase container */
-#phrase {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center the content */
-}
-
-/* Style for words and letters */
-.word, .punctuation {
-    display: inline-block; /* Prevent line breaks within words */
-    margin-right: 0.5em; /* Adjust the spacing between words */
-}
-
-/* Style for numbers */
-.number {
-    font-size: 0.8em;
-    color: gray;
-}
-
-/* Style for spaces between words */
-.space {
-    display: inline-block;
-    width: 1.5em; /* Adjust width to increase/decrease space */
-}
-
-/* Example styles for strikes container */
-.strike {
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    border: 2px solid black;
-    margin: 0 0.5em;
-    text-align: center;
-    line-height: 2em;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: red;
-}
-
-/* Example styles for check and X marks */
-.check-mark, .x-mark {
-    font-size: 1.5em;
-    margin-left: 0.5em;
-}
-
-.check-mark {
-    color: green;
-}
-
-.x-mark {
-    color: red;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    #game-container {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .key-row {
-        gap: 5px; /* Reduce gap between keys */
-    }
-
-    .key {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    #phrase {
-        font-size: 1em; /* Adjust font size for better readability */
-    }
-
-    #hint-button, #share-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    #game-container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .key-row {
-        gap: 3px; /* Further reduce gap between keys */
-    }
-
-    .key {
-        padding: 6px;
-        font-size: 12px;
-    }
-
-    #phrase {
-        font-size: 0.9em; /* Adjust font size for better readability */
-    }
-
-    #hint-button, #share-button {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
 }

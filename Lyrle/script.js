@@ -3,6 +3,13 @@ const phrases = [
     "THEY'RE TRYING TO TELL ME HOW TO FEEL."
 ];
 
+// Mapping for artist, album, and song hints
+const hintMappings = {
+    'ARTIST': 'Taylor Swift',
+    'ALBUM': 'Fearless',
+    'SONG': 'Love Story'
+};
+
 // Function to generate a random number mapping
 function generateRandomNumberMapping(phrase) {
     let uniqueChars = [...new Set(phrase.replace(/\s/g, "").toUpperCase())];
@@ -97,8 +104,6 @@ function endGame() {
 }
 
 // Function to share the game details
-// Function to share the game details
-// Function to share the game details
 function shareGame() {
     // Prepare the share message
     let shareMessage = `Look what I decoded!\n\nEncrypted phrase: ${document.getElementById("phrase").textContent}\n\nGuesses: ${getGuessesSummary()}\n\nIncorrect Tries: ${incorrectTries}`;
@@ -130,9 +135,6 @@ function getGuessesSummary() {
     return summary;
 }
 
-
-
-// Function to update the displayed phrase with mapped numbers and guessed letters
 // Function to update the displayed phrase with mapped numbers and guessed letters
 function updatePhraseDisplay() {
     let phraseDisplay = "";
@@ -156,7 +158,34 @@ function updatePhraseDisplay() {
     document.getElementById("phrase").innerHTML = phraseDisplay;
 }
 
+// Function to reveal a hint (artist, album, or song)
+function revealHint(hintType) {
+    // Create a new paragraph element for hint text
+    let hintElement = document.createElement('p');
+    hintElement.classList.add('hint-text');
 
+    // Display hint text below the phrase
+    switch (hintType) {
+        case 'artist':
+            hintElement.textContent = `Hint: ${hintMappings['ARTIST']}`;
+            break;
+        case 'album':
+            hintElement.textContent = `Hint: ${hintMappings['ALBUM']}`;
+            break;
+        case 'song':
+            hintElement.textContent = `Hint: ${hintMappings['SONG']}`;
+            break;
+        default:
+            break;
+    }
+
+    // Append hint text below the phrase
+    let phraseContainer = document.getElementById('phrase-container');
+    phraseContainer.appendChild(hintElement);
+
+    // Disable hint button after revealing
+    document.getElementById(`hint-${hintType}`).disabled = true;
+}
 
 // Function to guess a letter
 function guessLetter(letter) {

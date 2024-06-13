@@ -7,6 +7,12 @@ body {
     height: 100vh;
     margin: 0;
 }
+.word {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+    /* Other styles as needed */
+}
+
 
 #game-container {
     background-color: #fff;
