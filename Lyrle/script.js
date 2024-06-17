@@ -1,7 +1,8 @@
 // Define your phrases here (you can expand this with more phrases)
 const phrases = [
-    "A MILLION DOLLAR BABY"
+    "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
 ];
+
 
 // Mapping for artist, album, and song hints
 const hintMappings = {
