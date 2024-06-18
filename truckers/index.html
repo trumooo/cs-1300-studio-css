@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Driver AI</title>
+    <title>Routeabout
+    </title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -15,140 +16,146 @@
 </nav>
 <body>
     <header>
-        <h1>Learning How to Drive (rAI)</h1>
-        <h2>Redesigning the Content Organization for DriverAI - a 2024 Y Combinator Start-up</h2>
+        <h1>Minimum Viable Brief</h1>
+        <h2></h2>
         <div class="skills">
             <ul>
-                <li>Content Organization</li>
-                <li>Realworld</li>
-                <li>Design</li>
+                <li>User Interviews</li>
+                <li>MVB</li>
+                <li>Product Insights</li>
             </ul>
         </div>
     </header>
     <main>
         <div>
-            <h3>The Problem</h3>
-            <p>DriverAI is a young -up that seeks to use generative AI to create documentation for large codebases. They have only been in operation for a few months and are looking for ways to incorporate user feedback that they have received.</p>
-            <p><b>For 3 weeks, I worked with a team and DriverAI to create a new method of content organization.</b></p>
+            <h3>Overview</h3>
+            <p>I believe that the primary pain point for truck drivers comes from unexpected rerouting. Accidents, traffic, and roadblocks can completely disrupt a truck driver’s planned route. This creates a dangerous problem as drivers must quickly decide the alternative route, while still hoping to avoid underpasses and bridges that cannot support their vehicle and cargo’s height and weight. Through interviews and surveys with truck drivers, I believe that a real-time GPS navigation service specifically designed for these scenarios will satisfy this currently unmet need.</p>
+            <p><b>For 3 weeks, I interviewed Truck Drivers to attempt to solve their their GPS routing issues.</b></p>
         </div>
         <div class="problems">
-            <h3>What specifically doesn't work about the old organization?</h3>
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img src="assets/workspaces.png" alt="old workspaces page">
-                    <img src="assets/codebases.png" alt="old codebases page">
-                    <img src="assets/hub.png" alt="old hub page">
-                    <img src="assets/techdocs.png" alt="old tech docs page">
-                    <img src="assets/resources.png" alt="old resources page">
-                </div>
-                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            </div>
-            <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-
-                function changeSlide(n) {
-                    showSlides(slideIndex += n);
-                }
-
-                function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
-                    if (n > slides.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                }
-            </script>
-            
-            <p>These are the five pages dedicated to content organization AI-generated document. The previous design requires users to be familiar and confident with all of the layers. Here were some of the problems we identified with the current scenario:</p>
-            <ul>
-                <li>Heavily nested design.</li>
-                <li>Unclear terminology - "codebases" vs "workspaces"</li>
-                <li>No central work area</li>
-                <li>Too much detail for some personas - Product Managers vs Software Engineers</li>
-                <li>Sparse resource page</li>
-                <li>Monochromatic design</li>
-            </ul>
-            <p>After discussing these points with the founding engineer, we decided to focus on the first five as the monochrome theme was constant throughout the entire company.</p>
-            <p>In addition to the points we had raised, user feedback revealed that users struggle to know they can edit the generated documents and can view their code next to the documents.</p>
+            <h3>Finding Users:</h3>
+            <p>I started this project by reminding myself that I am not a truck driver. Truth be told, I actually don’t know how to drive at all. And while this might seem obvious, I know that I should never design projects around my own wants. The choices I make regarding product design should be grounded in the user’s perspective. This meant that I first needed to understand the user before building any product.</p>
+            <p>To find and validate an unmet need, I knew that online research would not be enough. If I wanted to understand truck drivers, I would need to talk to and gain information from as many as possible. To do this, I used several different approaches. First, I posted on trucking-specific online forums with my goal—of better understanding truck driving pain points—and an application to show interest in participating in my research. Second, I created an Instagram called “TruckerSurvey” and messaged truck driver’s accounts. To find these drivers, I went through the followers lists of several truck-driving influencers and meme pages, as well as looking for individuals who had engaged in posts with trucking-specific hashtags like “#TruckingUSA.” I created three different <a href="https://docs.google.com/document/d/130NubVMeL0Q8NEwh3vv21OocMMZ877cqffHU2dR3siQ/edit">messages</a> that I sent out to serve as an A/B test for what language was most effective. Next, I created an online Google Ads campaign advertising a survey that I had generated with several questions. Finally, I went to a nearby truck stop where I first observed and then talked with drivers. 
+            </p>            
+            <p>I placed a $200 budget on this project. I offered anyone who completed my survey $15 and anyone who submitted to an interview $20. In the end, I stuck within my budget and spent $190. Unfortunately, I did not receive any responses from Instagram messages. However, I did find some success with the other three methods. Specifically, I interviewed two people from the online forum (referred to as Lauren and Cathy), got ten complete survey responses and three partially filled out, and talked to two truck drivers at the rest stop (referred to as Jake and Leo).
+            </p>
         </div>
         <div class="brainstorm">
-            <h3>Getting into the Driver's Seat</h3>
-            <p>Now, my team and I sat down and drafted a few sketches. Each of us generated two completely new user flows.</p>
-            <p>I tried to create one more grounded workflow, so the other could be more experimental.</p>
-            <p>For this first round, I specifically focused on generating new ways to interact with the existing technology.</p>
-            <div class="side">
-                <img class="image" alt="Two new workflows" src="assets/brainstorming.png"/>
-                <img class="image" alt="Two new workflows by my peer" src="assets/notmine.png"/>
-            </div>
-            <p>Here I started to think about new ways to prompt the user to know that they could directly edit the documents and see the code.</p>
-            <p>A peer of mine created the sketches on the right, which inspired me to consider a dynamic sidebar system to help reduce nesting. I then chose to redesign the page that was formerly called tech docs. I decided that this page would be combined with the hub to serve as a central workplace for a user.</p>
-            <p>I called this new page "<b>The Dashboard</b>." Here, users would be able to not only view both generated technical documentation but also generated notes—like start-up guides or system breakdowns. I wanted to have the user view both of these on a single page because both are fundamental to the work needs of users. While they were on separate pages, users reported frequently jumping around, so it made sense to remove this pain point.</p>
-            <p>With these details, I began working on my low fidelity designs.</p>
+            <h3>Potential Ideas:</h3>
+            <p>I decided to brainstorm a couple of ideas that might be pain points for truck drivers. This allowed me to specifically investigate these subjects during my interviews. These included physical fitness/health, loneliness, navigation, and on-road entertainment. However, after my initial interviews, I was able to determine that the greatest pain points come from navigational challenges.</p>
         </div>
         <div class="wireframing">
             <div class="wireframe mobile">
-                <h3>Starting the Journey</h3>
-                <img class="lowfi_image" alt="low fidelity Figma" src="assets/orignallowfi.png"/>
-                <p>I created this low fidelity mockup in Figma. On the <b>left</b>, is a modified navigation bar. Previously, this was just a nested tree and search bar to find technical documents.
-                I included a new structure at the bottom for saved documents/notes, so users can quickly access their most frequently used pages.
-                I also placed the notes tree above the code tree, so users could now find both documents using the familiar structure.
-                I added a new section at the top where the user could swap personas. This way the technical document would change depending on who was viewing the page to best meet their needs.</p>
-                <p>In the <b>center</b>, I kept the document largely unchanged. However, I did add a small button on the top right where users could click to edit the document. This would help users know that they can directly modify the generated technical documents and notes.</p>
-                <p>On the <b>right</b>, I had the source code be open by default. It is still collapsible, but this way users can better understand DriverAI's features.</p>
-                <h4>Side by Side</h4>
-                <div class="side">
-                    <img class="image-small" alt="original DriverAI tech docs page" src="assets/techdocs.png"/>
-                    &#8594;
-                    <img class="image-small" alt="low fidelity Figma" src="assets/orignallowfi.png"/>
-                </div>
+                <h3>Findings:</h3>
+                <p>I began this project with my interview with Cathy. This interview helped me build out my initial hypothesis: finding trucking-safe roads is the biggest problem for truck drivers, in that truckers struggle to find roads that meet their specific height and weight requirements. For both Cathy and Lauren, I used a script that briefly went over daily routines and pain areas—with pre-outlined, probing questions to dig deeper into portions that seemed to resonate with interviewees. While the full script can be seen 
+                    <a href="https://docs.google.com/document/d/1scwtqj1AH8Tg1KUh0PJDJToh9iSq-7RdNaWpg6lrIks/edit?usp=sharing"> here</a>
+                    , I will outline some of the questions and meaningful responses that I received. </p>
+                    <p><b>Can you walk me through a typical day?</b></p>
+                    <p><i>“There are no typical days, and that’s the hardest thing for anyone who hasn’t done this job to understand.” (Cathy, 9:39) ”Car accident shuts down the interstate [...] Well one of the hardest things for a truck driver to do is to navigate in roads that are not on our route.  (Cathy, 10:50) “Now, I am out of my route. I can’t rely on GPS to keep me on truck paths. I can’t rely on GPS or Google Maps to not put me in front of a low bridge.” (Cathy, 12:10)
+                </i></p>
+                <p><b>If Google Maps and other technology aren’t compatible with a truck of your height what do you use?</b></p>
+                <p><i>“Back in the day, we were taught how to read maps. Rand McNally has a spiral-bound atlas that's a mapping system of every state. It tells you where way-stations are, where trucking routes are, low bridges, things like that.” (Cathy, 28:15)
+                    “A lot of the newer, younger people who were never taught maps, were taught how to rely on GPS. They don’t want to use them. They were never taught how to use them.” (28:43).
+                    </i></p>
+                <img class="image" alt="Persona for Cathy" src="assets/Cathy.png"/>
+                <p>After my interview with Cathy, I created this persona and empathy map to make sure I fully understood her perspective. Normally, Cathy prepares for her trip by reviewing what routes are safe for trucks to use in her paper atlas. However, if an accident or some incident occurs which forces her to make a detour, she is then on her own. Her GPS is not meant for truck driving, and she cannot consult the atlas while on the road. These are high-stakes scenarios where she cannot afford to make a mistake.</p>
+                <p>It was my interview with Lauren that made me realize how important the paper atlas was: 
+                </p>
+                <p><b>Can you walk me through a typical day?</b></p>
+                    <p><i>“So you have fourteen hours to work with on your clock for the day [...] I start writing down my directions of the first shipper and then receiver and then the fuel stops that I need to go to first. So I do that, write it down on a piece of paper—the directions—and if I need to I take my atlas and go through any bridge restrictions.” (Lauren, 2:00). 
+                        “I type it into my Garmin GPS system, set up my navigation on my Qualcomm.” (Lauren, 3:15). “I would say the hardest part is navigating through the cities you haven’t been to and just watching out for other drivers” (Lauren, 5:28) 
+                        </i></p>
+                <p>Lauren has only been driving for nine months, so she isn’t as knowledgeable about accessible truck routes and cities as Cathy. This has led to her using four main technologies when driving to ensure she reaches her destination. First, she uses “the Qualcomm that comes with the truck” but that isn’t very reliable because it “goes out or tells you that you are going the wrong direction when you aren’t.” Second, she uses a mounted Garmin GPS which is “a lifesaver.” However, she still needs to use her paper atlas map to double-check its instructions. Lastly, she still uses Google Maps’s satellite view to “gauge where the [delivery] truck entrance is.” However, she has heard peers complain that the“images are outdated.” </p>
+                <img class="image" alt="Persona for Lauren" src="assets/Lauren.png"/>
+                <p>During my in-person observations, I noticed a pair of drivers who operate as a team, meaning one sleeps while the other drives, spending a few minutes of their short break consulting a paper atlas. When I asked about this, Leo said “I don’t really like paper maps. I can’t use them as I go.” When I asked about the emergency rerouting scenarios that Cathy had mentioned, Leo confirmed their stress before saying “A couple of times, I have shouted at Jake to wake up, so he can figure things out while I drive.” It was these conversations with Leo and Lauren that made me edit my hypothesis. One of the biggest problems for truckers is that they don’t have one consistent source of accurate information to rely upon while they drive. They frequently find themselves flipping between many different technologies, but they do not have a place to turn when they need to quickly change routes. This causes them to have to make uninformed, yet high-stakes decisions. 
+                </p>
+
+                <p>
+                    I used the questions of my survey to see if this was a general truth amongst more truck drivers. For one of my questions, I had drivers rate 6 trucker-navigation technologies from most to least useful. Despite not offering any truck-specific settings, Google Maps got the highest score. The paper atlas was in second place, and the mounted GPS systems by Garmin and Rand were placed below both. These results reveal that truck drivers value high-quality, real-time GPS navigation. It also shows that the paper atlas’ trucking-specific information is helpful but not necessarily always accessible to drivers. 
+                </p>
+
+                <p>Thus, my research has revealed that the #1 pain point for truck drivers was unexpected rerouting. Older drivers could rely on their knowledge of cities, but newer drivers did not have a resource to help them in these high-speed scenarios. With this, I was ready to build a product to help truck drivers more quickly and safely reroute. </p>
             </div>
         </div>
         <div class="styleguide">
-            <h3>Re-Routing</h3>
-            <p>With my wireframes created, I wanted to reach out to our stakeholders and get feedback on my designs. From this conversation, I learned that the stacked navigation trees would not work because some users have thousands of documents. I also got the feedback that the select persona button probably could be placed within a profile, rather than on the documents themselves.</p>
-            <p>With this feedback, I created a revised version of my low fidelity mockups.</p>
-            <h4>Original and Revised</h4>
-            <div class="side">
-                <img class="image-small" alt="original low fidelity Figma" src="assets/orignallowfi.png"/>
-                &#8594;
-                <img class="image-small" alt="revised low fidelity Figma" src="assets/lowfi.png"/>
-            </div>
-            <p>Here, the most significant change is the addition of a toggle between the code and notes navigation tree. I also moved the favorite's section up to the top to reflect the high priority of the section.</p>
+            <h3>Product Design</h3>
+            <img class="image" alt="Mockup of App" src="assets/demo.png"/>
+            <p>Some workflows for this idea are cargo specification, traffic monitoring, dynamic routing, accident alert system, weather integration, rest-stop locator, regulation compliance, satellite feature, and user feedback system. While all of these would be beneficial to include in the ultimate product, many of these are just nice to have features. We want to create a lean minimum viable product (MVP) that first and foremost delivers on our customer’s primary problems, so I will define the <b>input</b>, <b>transformation</b>, and <b>output</b> for cargo specification, traffic monitoring, and dynamic routing.
+            </p>
+            <h4>Vehicle and Cargo Specification:</h4>
+            <ul>
+                <li>
+                    <p><b>Input:</b> Truck drivers enter specifications about their vehicle and cargo load (specifically maximum height and weight) when setting up their route. Note, that a future nice-to-have feature would be to directly log this data from Cat Scales (a service at many truck spots that weighs your vehicle and cargo).
+                    </p></li>
+                    <li><p><b>Transformation:</b> Input data is logged with the route’s requirements and the driver’s profile.
+                    </p></li>
+                    <li><p><b>Output:</b> GPS routes are calculated to avoid overpasses and bridges with these restrictions. It also alerts drivers to any parts of the route that are within a close margin.
+                    </p></li>
+            </ul>
+            <h4>Traffic Monitoring:</h4>
+            <ul>
+                <li>
+                    <p><b>Input:</b> Real-time geolocation data is taken from major traffic providers.
+                        User reports and travel rates logged by truckers in-app are used to detect congestion and road closures.                        
+                    </p></li>
+                    <li><p><b>Transformation:</b> The system aggregates data from multiple sources to validate traffic detection. 
+                    </p></li>
+                    <li><p><b>Output:</b> The app flags potential problems to be confirmed by other users (also serves as an input). Truckers receive real-time route and stop updates based on their fuel level and remaining drivable hours. 
+                    </p></li>
+            </ul>
+            <h4>Dynamic Routing:</h4>
+            <ul>
+                <li>
+                    <p><b>Input:</b> Truck driver inputs pick-up and drop-off locations, as well as the number of stops they wish to make on the way. Traffic conditions and cargo specifications also are inputs for this workflow. Option for an additional button on the interface to request multiple new routes.
+                    </p></li>
+                    <li><p><b>Transformation:</b> The app uses the set constraints to pre-load multiple alternative routes, decreasing in-moment searching time. Routes are updated based on detected traffic flows.
+                    </p></li>
+                    <li><p><b>Output:</b>Drivers can receive a new route at a moment's notice that has their current specifications and other requirements. The driver is given the option to accept or decline the new route. 
+                    </p></li>
+            </ul>
         </div>
         <div class="pit">
-            <h3>Pit Stop</h3>
-            <p>At this point, I created a style guide to help me better understand the brand identity before I began the high fidelity mockups.</p>
-            <div class="styleguideimages images">
-                <img class="image" alt="Style Guide page 1" src="assets/styleguide1.png"/>
-                <img class="image" alt="Style Guide page 2" src="assets/styleguide2.png"/>
+            <h3>Indicators of Success:</h3>
+            <p>For my MVP, I would have 3 main indicators of success. First, the primary goal of our product is to help truck drivers be more comfortable rerouting as they drive. Thus, our key performance indicator (KPI) should be the total number of successful reroutes. Here, the term successful should refer specifically to reroutes that were accepted by the driver after being prompted. Our other indicators of success should help us better understand the scale of our impact, so we should also consider metrics like total routes mapped or total miles navigated. Lastly, we don’t want our application to be successfully meeting our customer’s needs, so the third main indicator of our success is user retention rate (URR). </p>
             </div>
-            <p>I largely reverse-engineered this style guide from the current DriverAI website. Specifically, both the color gradation and font were directly taken from the original page. However, I did create the button, chip, and banner components to fit the demands of my new page.</p>
-        </div>
         <div class="high-fi">
-            <h2>Arriving at Our Destination</h2>
-            <p>This is the demo of my redesign of the tech docs page. The notable changes from the revised low fidelity are the inclusion of a button between the document and source code that will allow the user to quickly swap which section is on the left and right.</p>
-            <p>In the video below, you can also see the left-hand dynamic that my peers designed directly implemented with mine. This has replaced the codebases and workspace systems and helps users to quickly swap between projects as they work.</p>
-            <video class="video-player" autoplay muted loop>
-                <source src="assets/demo.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <h2>Future Considerations:</h2>
+            <p>After navigation troubles, the second most common pain point I heard for on-the-road truck drivers was loneliness: <i>“It’s really lonely being on your own and can cause depression to be worse.”</i> These drivers typically are away from home for weeks at a time—with very little interim social interactions. Thus, I believe that an important future development for this application would be the ability for truck drivers to “check-in” at rest stops. This would help build a community amongst drivers, so they could chat or eat a meal together.
+            </p>
+           <p>
+            I believe that the initial MVP should focus on growth rather than revenue, yet it is important to highlight what monetization type the app will eventually use. With the t-shirt sizing method, I found that the app should ultimately be monetized through <b>in-app advertisements</b> because this has an extremely large market with manageable complexity and a medium negative impact on user experience.
+           </p>
+           <table>
+            <tr>
+                <th>Monetization Type:</th>
+                <th>In-app Advertisements</th>
+                <th>Enterprise <br>(sold to shipping logistics companies)</th>
+                <th>Paid Stop Promotion</th>
+                <th>Freemium</th>
+            </tr>
+            <tr>
+                <td>Complexity:</td>
+                <td>M</td>
+                <td>L</td>
+                <td>L</td>
+                <td>M</td>
+            </tr>
+            <tr>
+                <td>Market:</td>
+                <td>XL</td>
+                <td>L</td>
+                <td>S</td>
+                <td>L</td>
+            </tr>
+            <tr>
+                <td>Negative Impact on User</td>
+                <td>M</td>
+                <td>S</td>
+                <td>L</td>
+                <td>M</td>
+            </tr>
+        </table>
         </div>
     </main>
-    <footer>
-        <h3>Takeaways</h3>
-        <ul>
-            <li>
-                <p><b>Communication:</b> The only reason I was able to end up with my final design was through many rounds of feedback. Specifically, I relied heavily upon the conversations I had with key stakeholders, users, and my team to design the best interface. Every conversation I had left me with a new idea or a better understanding of the problem.</p>
-            </li>
-            <li>
-                <p><b>Results:</b> The end design successfully satisfied the four most critical parts of user feedback.</p>
-            </li>
-        </ul>
-    </footer>
 </body>
 </html>

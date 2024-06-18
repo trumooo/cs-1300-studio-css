@@ -5,6 +5,14 @@
     background-position: center; /* Adjust this to change which part of the image is visible */
     overflow: hidden;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
 body {
     font-family: 'Cabin', sans-serif; /* Clean and modern font */
     line-height: 1.6;
