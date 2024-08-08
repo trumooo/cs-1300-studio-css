@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Distance Date Night Ideas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode {
+            background: linear-gradient(to right, #333, #555);
+        }
+
+        header {
+            background-color: #ff6f61;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode header {
+            background-color: #444;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode .container {
+            background-color: #555;
+            color: white;
+        }
+
+        .date-night-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 600px) {
+            .date-night-buttons {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.2s, background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .dark-mode button {
+            background-color: #444;
+        }
+
+        #idea-display {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dark-mode #idea-display {
+            color: white;
+        }
+
+        .countdown-container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .dark-mode .countdown-container {
+            background-color: #666;
+            color: white;
+        }
+
+        .countdown-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .dark-mode .countdown-title {
+            color: white;
+        }
+
+        .input-date {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: calc(100% - 22px); /* Adjusting width to fit within the container */
+        }
+
+        .dark-mode .input-date {
+            background-color: #444;
+            color: white;
+            border-color: #666;
+        }
+
+        .date-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .date-button:hover {
+            background-color: #e65c50;
+        }
+
+        .dark-mode .date-button {
+            background-color: #444;
+        }
+
+        .countdown-display {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .dark-mode .countdown-display {
+            color: white;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #777;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .dark-mode .footer {
+            color: #ccc;
+        }
+
+        .toggle-theme {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .dark-mode .toggle-theme {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Long Distance Date Night Ideas
+    </header>
+
+    <div class="container">
+        <div class="date-night-buttons">
+            <button id="chill-idea-button"><i class="fas fa-couch"></i> Chill Date Idea</button>
+            <button id="active-idea-button"><i class="fas fa-running"></i> Active Date Idea</button>
+            <button id="conversation-questions-button"><i class="fas fa-comments"></i> Conversation Questions</button>
+        </div>
+        <div id="idea-display">
+            <p id="idea-text"></p>
+        </div>
+    </div>
+
+    <div class="countdown-container">
+        <div class="countdown-title">Countdown to Next Meeting</div>
+        <input type="datetime-local" id="meeting-date" class="input-date">
+        <button class="date-button" id="set-date-button">Set Date</button>
+        <div id="countdown-display" class="countdown-display"></div>
+    </div>
+
+    <div class="footer">
+        
+        <div>
+            <i class="fas fa-clock"></i> NYC: <span id="nyc-time"></span>
+        </div>
+        <div>
+            <i class="fas fa-clock"></i> London: <span id="london-time"></span>
+        </div>
+    </div>
+
+    <div class="toggle-theme" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script>
+        const chillIdeas = [
+            "Watch a movie together using Teleparty.",
+            "Cook and eat a meal together over video call.",
+            "Read the same book and discuss it.",
+            "Take a virtual museum tour together.",
+            "Share and listen to playlists together.",
+            "Have a virtual coffee date.",
+            "Create a shared photo album.",
+            "Take a virtual meditation class together.",
+            "Write a story or poem together.",
+            "Plan your future travels."
+        ];
+
+        const activeIdeas = [
+            "Play an online game together like Among Us.",
+            "Participate in a virtual escape room.",
+            "Have a cooking challenge.",
+            "Work out together over a video call.",
+            "Do a DIY craft project together.",
+            "Join a virtual dance class.",
+            "Have a photo scavenger hunt.",
+            "Do a karaoke night using online tools.",
+            "Take an online painting class together.",
+            "Go on a virtual city tour."
+        ];
+
+        const conversationQuestions = [
+            "What is a skill you've always wanted to learn and why?",
+            "Where do you see yourself in five years?",
+            "If you could have dinner with any fictional character, who would it be and why?",
+            "What are some of the biggest challenges you've faced in life and how did you overcome them?",
+            "What are some of your favorite memories of us together?",
+            "What is one thing you’ve never told anyone?",
+            "What is your favorite childhood memory?",
+            "What are you most proud of in your life?",
+            "What are your biggest fears and how do you cope with them?",
+            "What would you do if you won the lottery?"
+        ];
+
+        let seenChillIdeas = [];
+        let seenActiveIdeas = [];
+        let seenConversationQuestions = [];
+
+        function getRandomIdea(ideas, seenIdeas) {
+            if (seenIdeas.length === ideas.length) {
+                seenIdeas.length = 0; // Reset seen ideas if all have been shown
+            }
+            let idea;
+            do {
+                idea = ideas[Math.floor(Math.random() * ideas.length)];
+            } while (seenIdeas.includes(idea));
+            seenIdeas.push(idea);
+            return idea;
+        }
+
+        document.getElementById('chill-idea-button').addEventListener('click', () => {
+            const idea = getRandomIdea(chillIdeas, seenChillIdeas);
+            document.getElementById('idea-text').innerText = idea;
+        });
+
+        document.getElementById('active-idea-button').addEventListener('click', () => {
+            const idea = getRandomIdea(activeIdeas, seenActiveIdeas);
+            document.getElementById('idea-text').innerText = idea;
+        });
+
+        document.getElementById('conversation-questions-button').addEventListener('click', () => {
+            const question = getRandomIdea(conversationQuestions, seenConversationQuestions);
+            document.getElementById('idea-text').innerText = question;
+        });
+
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        function updateTime() {
+            const now = new Date();
+            const londonTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/London" }));
+            const nycTime = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+
+            document.getElementById('london-time').innerText = londonTime.toLocaleTimeString();
+            document.getElementById('nyc-time').innerText = nycTime.toLocaleTimeString();
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call to set time immediately
+
+        // Countdown Timer
+        let meetingDate = null;
+
+        function updateCountdown() {
+            if (!meetingDate) return;
+
+            const now = new Date();
+            const timeRemaining = meetingDate - now;
+
+            if (timeRemaining <= 0) {
+                document.getElementById('countdown-display').innerText = "The time has arrived!";
+                return;
+            }
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown-display').innerText =
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        document.getElementById('set-date-button').addEventListener('click', () => {
+            const inputDate = document.getElementById('meeting-date').value;
+            if (inputDate) {
+                meetingDate = new Date(inputDate);
+                setInterval(updateCountdown, 1000);
+                updateCountdown();
+            }
+        });
+    </script>
+</body>
+</html>
